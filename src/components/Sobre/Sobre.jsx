@@ -5,10 +5,36 @@ import Women3 from "../../assets/sobre/women3.jpg";
 import Women4 from "../../assets/sobre/women4.jpg";
 import Women5 from "../../assets/sobre/women5.jpg";
 import Women6 from "../../assets/sobre/women6.jpg";
+import Women7 from "../../assets/sobre/women7.jpeg";
+import Women8 from "../../assets/sobre/women8.jpeg";
+import Women9 from "../../assets/sobre/women9.jpeg";
+import Women10 from "../../assets/sobre/women10.jpeg";
+import Women11 from "../../assets/sobre/women11.jpeg";
+import Women12 from "../../assets/sobre/women12.jpeg";
+import Women13 from "../../assets/sobre/women13.jpeg";
+import Women14 from "../../assets/sobre/women14.jpeg";
+import Women15 from "../../assets/sobre/women15.jpeg";
 import Logo from "../../assets/sobre/logo.jpg";
 
 // Array com todas as imagens
-const imagesArray = [Women, Women2, Women3, Women4, Women5, Women6, Logo];
+const imagesArray = [
+  Women,
+  Women2,
+  Women3,
+  Women4,
+  Women5,
+  Women6,
+  Women7,
+  Women8,
+  Women9,
+  Women10,
+  Women11,
+  Women12,
+  Women13,
+  Women14,
+  Women15,
+  Logo,
+];
 
 function Sobre() {
   const [images, setImages] = useState([
@@ -18,6 +44,15 @@ function Sobre() {
     Women4,
     Women5,
     Women6,
+    Women7,
+    Women8,
+    Women9,
+    Women10,
+    Women11,
+    Women12,
+    Women13,
+    Women14,
+    Women15,
     Logo,
   ]);
 
@@ -36,7 +71,6 @@ function Sobre() {
 
     // Limpa o intervalo ao desmontar o componente
     return () => clearInterval(intervalId);
-    
   }, []);
 
   return (

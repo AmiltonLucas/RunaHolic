@@ -8,16 +8,16 @@ import Testimonials from "../../components/TestimonialData/TestimonialData";
 import Footer from "../../components/Footer/Footer";
 import Popup from "../../components/Popup/Popup";
 import Sobre from "../../components/Sobre/Sobre";
-import Example from "../../components/NavBar2/NavBar";
 
 const Home = () => {
   return (
     <div className="dark:bg-gray-900 dark:text-white">
-      <Example />
+      <Navbar />
       <Hero />
       <Sobre />
       <TopProducts />
       <Banner />
+      <Products />
       <Testimonials />
       <Footer />
       <Popup />
