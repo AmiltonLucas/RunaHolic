@@ -2,7 +2,7 @@ import React from "react";
 
 const BuyOptions = () => {
   return (
-    <>
+    <div className="dark:bg-gray-900 dark:text-white">
       {/* Container principal  */}
       <div
         className="container mx-auto p-6 dark:bg-gray-900 dark:text-white transition-all duration-200"
@@ -233,7 +233,7 @@ const BuyOptions = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

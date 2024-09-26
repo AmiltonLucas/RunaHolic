@@ -4,21 +4,20 @@ import Hero from "../../components/Hero/Hero";
 import Products from "../../components/Products/Products";
 import TopProducts from "../../components/TopProducts/TopProducts";
 import Banner from "../../components/Banner/Banner";
-import Subscribe from "../../components/Subscribe/Subscribe";
 import Testimonials from "../../components/TestimonialData/TestimonialData";
 import Footer from "../../components/Footer/Footer";
 import Popup from "../../components/Popup/Popup";
+import Sobre from "../../components/Sobre/Sobre";
+import Example from "../../components/NavBar2/NavBar";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="dark:bg-gray-900 dark:text-white">
+      <Example />
       <Hero />
-      <Products />
+      <Sobre />
       <TopProducts />
       <Banner />
-      <Subscribe />
-      <Products />
       <Testimonials />
       <Footer />
       <Popup />

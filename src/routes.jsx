@@ -6,6 +6,7 @@ import TopAvaliados from "./pages/TopAvaliados";
 import Infantil from "./pages/Infantil";
 import Masculino from "./pages/Masculino";
 import Feminino from "./pages/Feminino";
+import Productoverviews from "./pages/Overviews";
 
 function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ function AppRoutes() {
           <Route path="/infantil" element={<Infantil />}></Route>
           <Route path="/masculino" element={<Masculino />}></Route>
           <Route path="/feminino" element={<Feminino />}></Route>
+          <Route path="/Produto" element={<Productoverviews />}></Route>
         </Routes>
       </BrowserRouter>
     </>

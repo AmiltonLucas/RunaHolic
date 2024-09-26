@@ -50,7 +50,7 @@ const ProductsData = [
 
 const Products = () => {
   return (
-    <div className="mt-14 mb-12">
+    <div className="mt-14 mb-12 dark:bg-gray-900 dark:text-white">
       <div className="container dark:bg-gray-900 dark:text-white">
         {/* Header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
@@ -60,7 +60,7 @@ const Products = () => {
           <h1 data-aos="fade-up" className="text-3xl font-bold">
             Products
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
+          <p data-aos="fade-up" className="text-xs text-gray-400 dark:text-gray-300">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
             asperiores modi Sit asperiores modi
           </p>
@@ -83,7 +83,7 @@ const Products = () => {
                 />
                 <div>
                   <h3 className="font-semibold">{data.title}</h3>
-                  <p className="text-sm text-gray-600">{data.color}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{data.color}</p>
                   <div className="flex items-center gap-1">
                     <FaStar className="text-yellow-400" />
                     <span>{data.rating}</span>

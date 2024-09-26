@@ -4,27 +4,32 @@ import Slider from "react-slick";
 const TestimonialData = [
   {
     id: 1,
-    name: "Victor",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Ana Souza",
+    text: "A Runaholic é incrível! Encontrei exatamente o que precisava para minhas corridas, desde tênis de alta performance até roupas confortáveis.",
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
-    name: "Satya Nadella",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "João Pereira",
+    text: "O melhor equipamento para minha primeira maratona. Com certeza, virei cliente fiel!",
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
-    name: "Virat Kohli",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Lucas Oliveira",
+    text: "A Runaholic tem tudo que um corredor precisa. Desde acessórios, tênis, até roupas leves e de alta qualidade. Recomendo!",
+    img: "https://picsum.photos/103/103",
+  },
+  {
+    id: 4,
+    name: "Pedro Costa",
+    text: "Adorei comprar na Runaholic! Além dos preços competitivos, o material esportivo que adquiri foi de excelente qualidade.",
     img: "https://picsum.photos/104/104",
   },
   {
-    id: 5,
-    name: "Sachin Tendulkar",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/103/103",
+    name: "Marcos Almeida",
+    text: "Sempre faço minhas compras na Runaholic. A loja tem uma variedade enorme de produtos de corrida, e o site é muito fácil de navegar.",
+    img: "https://picsum.photos/105/105",
   },
 ];
 
@@ -73,10 +78,10 @@ const Testimonials = () => {
         {/* header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
-            What our customers are saying
+            O que nossos clientes estão dizendo
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Testimonials
+            depoimentos
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
@@ -91,7 +96,7 @@ const Testimonials = () => {
               <div className="my-6">
                 <div
                   key={data.id}
-                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative"
+                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-500 bg-secondary/30 relative"
                 >
                   <div className="mb-4">
                     <img
@@ -102,8 +107,10 @@ const Testimonials = () => {
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <div className="space-y-3">
-                      <p className="text-xs text-gray-500">{data.text}</p>
-                      <h1 className="text-xl font-bold text-black/80 dark:text-light">
+                      <p className="text-xs text-black dark:text-white">
+                        {data.text}
+                      </p>
+                      <h1 className="text-xl font-bold text-black/80 dark:text-white">
                         {data.name}
                       </h1>
                     </div>
