@@ -1,4 +1,4 @@
-import Sidebar from '../AdminSidebar/AdminSidebar';
+import Sidebar from "../AdminSidebar/AdminSidebar";
 
 function AdminDashboard() {
   return (
@@ -9,9 +9,7 @@ function AdminDashboard() {
       {/* Área principal */}
       <div className="flex flex-col flex-1">
         <main className="flex-1 p-6 bg-white">
-          <h1 className="text-3xl font-bold">Admin Dashboard</h1>
-          <p className="mt-4">Aqui você pode gerenciar suas informações.</p>
-          {/* Coloque o conteúdo adicional da área principal aqui */}
+            <h2>Admin Dashboard</h2>
         </main>
       </div>
     </div>

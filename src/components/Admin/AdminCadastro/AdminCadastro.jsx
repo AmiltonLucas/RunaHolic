@@ -1,6 +1,7 @@
 // src/components/ProductForm.jsx
 
 import React, { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Cadastro = () => {
   const [product, setProduct] = useState({
@@ -55,6 +56,9 @@ const Cadastro = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
+        <a href="/admin" className="justify-betweent flex gap-2 mb-2">
+          <FaArrowLeft />
+        </a>
         <h2 className="text-2xl font-bold mb-6 text-center">
           Cadastrar Produto
         </h2>
