@@ -1,3 +1,4 @@
+// importações necessárias
 import React from "react";
 
 const BuyOptions = () => {
@@ -73,7 +74,7 @@ const BuyOptions = () => {
                   <option value="large">Grande</option>
                 </select>
               </div>
-
+              {/* Filtro de cores */}
               <div className="mb-4">
                 <label className="block font-medium text-gray-700 dark:text-white">
                   Cor

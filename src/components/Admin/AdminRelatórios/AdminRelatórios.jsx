@@ -1,3 +1,4 @@
+// importações necessárias
 import { FaArrowLeft } from 'react-icons/fa';
 import Sidebar from '../AdminSidebar/AdminSidebar';
 

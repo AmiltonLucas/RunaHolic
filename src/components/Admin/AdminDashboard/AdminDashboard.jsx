@@ -1,3 +1,5 @@
+// importações necessárias
+import React from "react";
 import Sidebar from "../AdminSidebar/AdminSidebar";
 
 function AdminDashboard() {
@@ -9,7 +11,8 @@ function AdminDashboard() {
       {/* Área principal */}
       <div className="flex flex-col flex-1">
         <main className="flex-1 p-6 bg-white">
-            <h2>Admin Dashboard</h2>
+          <h2>Admin Dashboard</h2>
+          {/* Coloque o conteúdo adicional da área principal aqui */}
         </main>
       </div>
     </div>

@@ -1,3 +1,4 @@
+// Importações de arquivos
 import React, { useState, useEffect } from "react";
 import Women from "../../assets/sobre/women.jpg";
 import Women2 from "../../assets/sobre/women2.jpg";
@@ -74,6 +75,7 @@ function Sobre() {
   }, []);
 
   return (
+    // informações da lateral esquerda
     <div className="relative overflow-hidden bg-white mt-20 dark:bg-gray-900 dark:text-white">
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
@@ -88,7 +90,7 @@ function Sobre() {
           </div>
           <div>
             <div className="mt-10">
-              {/* Decorative image grid */}
+              {/* grid decorativo de imagens */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
@@ -96,6 +98,7 @@ function Sobre() {
                 <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                   <div className="flex items-center space-x-6 lg:space-x-8">
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      {/* Seção de puxar as imagens para o layout */}
                       <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                         <img
                           alt=""
@@ -153,9 +156,9 @@ function Sobre() {
                   </div>
                 </div>
               </div>
-
+                {/* Botão de descobrir mais, leva para a pagina sobre nós */}
               <a
-                href="#"
+                href="/sobrenos"
                 className="inline-block rounded-md border border-transparent bg-secondary px-8 py-3 text-center font-medium text-white hover:bg-secondary/70 dark:bg-primary"
               >
                 Descubra mais

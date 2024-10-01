@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "../../components/NavBar/Navbar";
 import Hero from "../../components/Hero/Hero";
-import Products from "../../components/Products/Products";
+import Sobre from "../../components/Sobre/Sobre";
 import TopProducts from "../../components/TopProducts/TopProducts";
 import Banner from "../../components/Banner/Banner";
+import Products from "../../components/Products/Products";
+import ProductsMasculinos from "../../components/Products/ProductsMasculinos";
 import Testimonials from "../../components/TestimonialData/TestimonialData";
 import Footer from "../../components/Footer/Footer";
 import Popup from "../../components/Popup/Popup";
-import Sobre from "../../components/Sobre/Sobre";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <TopProducts />
       <Banner />
       <Products />
+      <ProductsMasculinos />
       <Testimonials />
       <Footer />
       <Popup />

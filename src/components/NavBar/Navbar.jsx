@@ -1,5 +1,5 @@
 "use client";
-
+// Imports
 import { Fragment, useState } from "react";
 import {
   Dialog,
@@ -23,7 +23,12 @@ import {
 } from "@heroicons/react/24/outline";
 import DarkMode from "./DarkMode";
 import Logo from "../../assets/logo.png";
+import Shorts from "../../assets/NavBar/shorts.jpg";
+import TopCropped from "../../assets/NavBar/topcropped.jpg";
+import Camisas from "../../assets/NavBar/camisas.jpeg";
+import ShortMasculino from "../../assets/NavBar/shortsMasculino.jpeg";
 
+// Informações dentro do dropdown
 const navigation = {
   categories: [
     {
@@ -31,18 +36,16 @@ const navigation = {
       name: "Feminino",
       featured: [
         {
-          name: "New Arrivals",
+          name: "Novos shorts",
           href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
+          imageSrc: Shorts,
           imageAlt:
             "Models sitting back to back, wearing Basic Tee in black and bone.",
         },
         {
-          name: "Basic Tees",
+          name: "Top Cropped",
           href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
+          imageSrc: TopCropped,
           imageAlt:
             "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
         },
@@ -85,20 +88,18 @@ const navigation = {
       name: "Masculino",
       featured: [
         {
-          name: "New Arrivals",
+          name: "Novas Camisas",
           href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
+          imageSrc: Camisas,
           imageAlt:
-            "Drawstring top with elastic loop closure and textured interior padding.",
+            "Camisas de alta qualidade e conforto padrão RunaHolic",
         },
         {
-          name: "Artwork Tees",
+          name: "Shorts de corrida",
           href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
+          imageSrc: ShortMasculino,
           imageAlt:
-            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
+            "Shorts de corrida de alta qualidade e conforto padrão RunaHolic",
         },
       ],
       sections: [
@@ -131,11 +132,13 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Sobre nós", href: "#" },
-    { name: "Lojas", href: "#" },
+    { name: "Eventos", href: "/eventos" },
+    { name: "Sobre nós", href: "/sobrenos" },
+    { name: "Lojas", href: "/lojas" },
   ],
 };
 
+// Informações da LowerBar
 const Menu = [
   {
     id: 1,
@@ -170,7 +173,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-white">
-      {/* Mobile menu */}
+      {/* Menu Mobile */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
           transition
@@ -201,7 +204,7 @@ export default function Navbar() {
                   {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
-                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 dark:text-gray-100 data-[selected]:border-primary/60 data-[selected]:text-primary/60 dark:data-[selected]:border-secondary/60 dark:data-[selected]:text-secondary/60"
+                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 dark:text-gray-100 data-[selected]:border-primary data-[selected]:text-primary dark:data-[selected]:border-secondary/60 dark:data-[selected]:text-secondary/60"
                     >
                       {category.name}
                     </Tab>
@@ -286,22 +289,22 @@ export default function Navbar() {
                 </div>
               ))}
             </div>
-
+              {/* Login de conta mobile */}
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a
-                  href="#"
+                  href="/login"
                   className="-m-2 block p-2 font-medium text-gray-900 dark:text-gray-100"
                 >
-                  Sign in
+                  Entrar
                 </a>
               </div>
               <div className="flow-root">
                 <a
-                  href="#"
+                  href="/login"
                   className="-m-2 block p-2 font-medium text-gray-900 dark:text-gray-100"
                 >
-                  Create account
+                  Crie uma conta
                 </a>
               </div>
             </div>
@@ -309,8 +312,9 @@ export default function Navbar() {
         </div>
       </Dialog>
 
-      <header className="relative bg-primary/40 dark:bg-secondary">
-        <p className="flex h-10 items-center justify-center px-4 text-sm font-medium text-gray-900 dark:text-gray-100 sm:px-6 lg:px-8">
+      <header className="relative bg-primary/80 dark:bg-secondary">
+      {/* informação no topo da navbar */}
+        <p className="flex h-10 items-center justify-center px-4 text-sm font-mediu text-white sm:px-6 lg:px-8">
           Frete gratís apartir de R$ 450
         </p>
 
@@ -323,16 +327,16 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="relative rounded-md p-2 text-gray-500 dark:text-gray-50 lg:hidden "
+                className="relative rounded-md p-2 text-gray-50 lg:hidden "
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon aria-hidden="true" className="h-6 w-6" />
               </button>
 
-              {/* Logo */}
+              {/* Logomarca */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <a href="/">
                   <span className="sr-only">Your Company</span>
                   <img src={Logo} className="h-8 w-auto" />
                 </a>
@@ -344,7 +348,7 @@ export default function Navbar() {
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
-                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-900 dark:text-white transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-white data-[open]:text-white  dark:data-[open]:border-gray-900 dark:data-[open]:text-gray-900">
+                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-white transition-colors duration-200 ease-out hover:text-gray-200 data-[open]:border-white data-[open]:text-white  dark:data-[open]:border-gray-900 dark:data-[open]:text-gray-900">
                           {category.name}
                         </PopoverButton>
                       </div>
@@ -430,26 +434,26 @@ export default function Navbar() {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-white dark:text-gray-100 dark:hover:text-gray-400"
+                      className="flex items-center text-sm font-medium hover:text-white text-gray-100 dark:hover:text-gray-400"
                     >
                       {page.name}
                     </a>
                   ))}
                 </div>
               </PopoverGroup>
-
+                  {/* Login desktop */}
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
-                    href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-white dark:text-gray-100 dark:hover:text-gray-400"
+                    href="/login"
+                    className="text-sm font-medium hover:text-gray-200 text-gray-100 dark:hover:text-gray-400"
                   >
                     Entre
                   </a>
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                   <a
-                    href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-white dark:text-gray-100 dark:hover:text-gray-400"
+                    href="/login"
+                    className="text-sm font-medium hover:text-gray-200 text-gray-100 dark:hover:text-gray-400"
                   >
                     Crie uma conta
                   </a>
@@ -459,11 +463,11 @@ export default function Navbar() {
                   <DarkMode />
                 </div>
 
-                {/* Search */}
+                {/* Barra de pesquisa*/}
                 <div className="flex lg:ml-6">
                   <a
                     href="#"
-                    className="p-2 text-gray-700 hover:text-white dark:text-gray-100 dark:hover:text-gray-300"
+                    className="p-2 hover:text-gray-200 text-gray-100 dark:hover:text-gray-300"
                   >
                     <span className="sr-only">Pesquisar</span>
                     <MagnifyingGlassIcon
@@ -473,7 +477,7 @@ export default function Navbar() {
                   </a>
                 </div>
 
-                {/* Cart */}
+                {/* Carrinho */}
                 <div>
                   {/* Botão do Carrinho */}
                   <div className="ml-4 flow-root lg:ml-6">
@@ -483,9 +487,9 @@ export default function Navbar() {
                     >
                       <ShoppingBagIcon
                         aria-hidden="true"
-                        className="h-6 w-6 flex-shrink-0 text-gray-700 group-hover:text-white dark:text-gray-100"
+                        className="h-6 w-6 flex-shrink-0 hover:text-gray-200 text-gray-100 dark:hover:text-gray-300"
                       />
-                      <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-white dark:text-gray-100">
+                      <span className="ml-2 text-sm font-medium hover:text-gray-200 text-gray-100 dark:hover:text-gray-300">
                         0
                       </span>
                       <span className="sr-only">items in cart, view bag</span>

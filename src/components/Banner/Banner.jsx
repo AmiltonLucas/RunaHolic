@@ -1,3 +1,4 @@
+// Importações necessárias 
 import React from "react";
 import BannerImg from "../../assets/women/women3.jpg";
 import { GrSecure } from "react-icons/gr";
@@ -10,7 +11,7 @@ const Banner = () => {
     <div className="min-h-[550px] flex justify-center items-center py-12 sm:py-0">
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-          {/* image section */}
+          {/* Seção de imagem */}
           <div data-aos="zoom-in">
             <img
               src={BannerImg}
@@ -19,7 +20,7 @@ const Banner = () => {
             />
           </div>
 
-          {/* text details section */}
+          {/* seção de informações e textos */}
           <div className="flex flex-col justify-center gap-6 sm:pt-0">
             <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">
               Promoção de inverno com até 50% de desconto

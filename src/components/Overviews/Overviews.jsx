@@ -1,17 +1,21 @@
-"use client";
+// NECESSÁRIO FAZER LIKAGEM AO BUYOPTIONS PRA QUE ESSA PAGINA OFERTE O PRODUTO DESEJADO AO CLICLAR!
 
+// importações necessárias
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
 
+// Const com informações do produtos
 const product = {
-  name: "Basic Tee 6-Pack",
-  price: "$192",
+  // Tipo do produto
+  name: "Pack básico com 6 camisas",
+  price: "R$ 200",
   href: "#",
   breadcrumbs: [
-    { id: 1, name: "Men", href: "#" },
-    { id: 2, name: "Clothing", href: "#" },
+    { id: 1, name: "Masculino", href: "/masculino" },
+    { id: 2, name: "Camisas", href: "#" },
   ],
+  // Fotos do produto
   images: [
     {
       src: "https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
@@ -30,33 +34,39 @@ const product = {
       alt: "Model wearing plain white basic tee.",
     },
   ],
+  //Cores do produto
   colors: [
     { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
     { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
     { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
   ],
+  // Tamanhos disponiveis (False = Sem estoque) , (True = Com estoque)
   sizes: [
-    { name: "XXS", inStock: false },
-    { name: "XS", inStock: true },
-    { name: "S", inStock: true },
+    { name: "XXP", inStock: false },
+    { name: "XP", inStock: false },
+    { name: "P", inStock: true },
     { name: "M", inStock: true },
-    { name: "L", inStock: true },
-    { name: "XL", inStock: true },
-    { name: "2XL", inStock: true },
-    { name: "3XL", inStock: true },
+    { name: "G", inStock: true },
+    { name: "XG", inStock: true },
+    { name: "2XG", inStock: true },
+    { name: "3XG", inStock: false },
   ],
+  // descrição do produto
   description:
     'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+    // Tecnologias do produto
   highlights: [
     "Hand cut and sewn locally",
     "Dyed with our proprietary colors",
     "Pre-washed & pre-shrunk",
     "Ultra-soft 100% cotton",
   ],
+  // Descrição menos do produto
   details:
     'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 };
 
+// Avaliações
 const reviews = { href: "#", average: 4, totalCount: 117 };
 
 function classNames(...classes) {
@@ -109,7 +119,7 @@ export default function Overviews() {
           </ol>
         </nav>
 
-        {/* Image gallery */}
+        {/* Layout das fotos e sequencia */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
             <img
@@ -143,7 +153,7 @@ export default function Overviews() {
           </div>
         </div>
 
-        {/* Product info */}
+        {/* Informações do produto */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
@@ -151,14 +161,14 @@ export default function Overviews() {
             </h1>
           </div>
 
-          {/* Options */}
+          {/* Opçoês de compra */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
             <p className="text-3xl tracking-tight text-gray-900">
               {product.price}
             </p>
 
-            {/* Reviews */}
+            {/* Avaliações */}
             <div className="mt-6">
               <h3 className="sr-only">Reviews</h3>
               <div className="flex items-center">
@@ -187,7 +197,7 @@ export default function Overviews() {
             </div>
 
             <form className="mt-10">
-              {/* Colors */}
+              {/* Cores disponiveis */}
               <div>
                 <h3 className="text-sm font-medium text-gray-900">Color</h3>
 
@@ -220,7 +230,7 @@ export default function Overviews() {
                 </fieldset>
               </div>
 
-              {/* Sizes */}
+              {/* Tamanhos disponiveis */}
               <div className="mt-10">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-medium text-gray-900">Size</h3>
@@ -282,7 +292,7 @@ export default function Overviews() {
                   </RadioGroup>
                 </fieldset>
               </div>
-
+                {/* Adicionanr ao carrinho */}
               <button
                 type="submit"
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -293,7 +303,7 @@ export default function Overviews() {
           </div>
 
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-            {/* Description and details */}
+            {/* Descrição e detalhes do produto */}
             <div>
               <h3 className="sr-only">Description</h3>
 

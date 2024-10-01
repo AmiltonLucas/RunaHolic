@@ -3,6 +3,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const Popup = ({ orderPopup, setOrderPopup }) => {
   return (
+    // Não está sendo usado ainda
     <>
       {orderPopup && (
         <div className="popup">

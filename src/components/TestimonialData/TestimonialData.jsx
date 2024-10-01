@@ -1,6 +1,8 @@
+// importações necessárias
 import React from "react";
 import Slider from "react-slick";
 
+// const com informações das avaliações
 const TestimonialData = [
   {
     id: 1,
@@ -34,6 +36,7 @@ const TestimonialData = [
 ];
 
 const Testimonials = () => {
+  // configurações do slider
   var settings = {
     dots: true,
     arrows: false,
@@ -75,7 +78,7 @@ const Testimonials = () => {
   return (
     <div className="py-10 mb-10">
       <div className="container">
-        {/* header section */}
+        {/* seção de texto */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
             O que nossos clientes estão dizendo
@@ -89,15 +92,17 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonial cards */}
+        {/* cards de testemunhos/avalições */}
         <div data-aos="zoom-in">
           <Slider {...settings}>
             {TestimonialData.map((data) => (
               <div className="my-6">
+                {/* Puxa o id da mensagem */}
                 <div
                   key={data.id}
                   className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-500 bg-secondary/30 relative"
                 >
+                  {/* puxa a foto da imagem */}
                   <div className="mb-4">
                     <img
                       src={data.img}
@@ -105,16 +110,19 @@ const Testimonials = () => {
                       className="rounded-full w-20 h-20"
                     />
                   </div>
+                  {/* Puxa do texto da avaliação */}
                   <div className="flex flex-col items-center gap-4">
                     <div className="space-y-3">
                       <p className="text-xs text-black dark:text-white">
                         {data.text}
                       </p>
+                      {/* Puxa o nome de quem fez a avaliação */}
                       <h1 className="text-xl font-bold text-black/80 dark:text-white">
                         {data.name}
                       </h1>
                     </div>
                   </div>
+                  {/* Apenas pra deixar bonito */}
                   <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
                     ,,
                   </p>

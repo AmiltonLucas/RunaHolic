@@ -1,8 +1,8 @@
-// src/components/ProductForm.jsx
-
+// importações necessárias
 import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
+// informações para cadastro
 const Cadastro = () => {
   const [product, setProduct] = useState({
     name: "",
@@ -12,6 +12,7 @@ const Cadastro = () => {
     image: null,
   });
 
+  //const pra carregar imagens
   const [previewImage, setPreviewImage] = useState(null);
 
   const handleChange = (e) => {
@@ -39,14 +40,15 @@ const Cadastro = () => {
     }
   };
 
+  //informações de formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     // Você pode usar o FormData para enviar a imagem junto com os outros dados
     const formData = new FormData();
     formData.append("name", product.name);
-    formData.append("description", product.description);
     formData.append("price", product.price);
     formData.append("category", product.category);
+    formData.append("color", product.color);
     formData.append("image", product.image);
 
     console.log("Product submitted: ", product);
@@ -56,12 +58,14 @@ const Cadastro = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
+        {/* Seta para voltar ao menu adm */}
         <a href="/admin" className="justify-betweent flex gap-2 mb-2">
           <FaArrowLeft />
         </a>
         <h2 className="text-2xl font-bold mb-6 text-center">
           Cadastrar Produto
         </h2>
+        {/* informções para o cadastro */}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
