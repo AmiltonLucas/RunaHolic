@@ -34,7 +34,6 @@ const imagesArray = [
   Women13,
   Women14,
   Women15,
-  Logo,
 ];
 
 function Sobre() {
@@ -54,7 +53,6 @@ function Sobre() {
     Women13,
     Women14,
     Women15,
-    Logo,
   ]);
 
   // Função para embaralhar imagens
@@ -118,7 +116,7 @@ function Sobre() {
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
-                          src={images[2]}
+                          src={Logo}
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
@@ -132,7 +130,7 @@ function Sobre() {
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
                           alt=""
-                          src={images[4]}
+                          src={Logo}
                           className="h-full w-full object-cover object-center"
                         />
                       </div>

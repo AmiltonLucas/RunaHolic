@@ -11,7 +11,10 @@ const Sidebar = () => {
       <nav className="flex-1">
         <ul>
           <li className="p-4 hover:bg-blue-700">
-            <Link to="/admin/cadastro">Cadastro</Link>
+            <Link to="/admin/cadastro-produtos">Cadastrar Produtos</Link>
+          </li>
+          <li className="p-4 hover:bg-blue-700">
+            <Link to="/admin/cadastro-eventos">Cadastrar Eventos</Link>
           </li>
           <li className="p-4 hover:bg-blue-700">
             <Link to="/admin/config">Configurações</Link>

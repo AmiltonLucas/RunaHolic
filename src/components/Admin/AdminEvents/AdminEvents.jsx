@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
 // informações para cadastro
-const Cadastro = () => {
+const AdminEvents = () => {
   const [product, setProduct] = useState({
     name: "",
-    price: "",
     description: "",
-    stock: "",
     category: "",
-    color: "",
+    date: "",
+    price: "",
+    contact: "",
     image: null,
   });
 
@@ -48,11 +48,11 @@ const Cadastro = () => {
     // Você pode usar o FormData para enviar a imagem junto com os outros dados
     const formData = new FormData();
     formData.append("name", product.name);
-    formData.append("price", product.price);
     formData.append("description", product.description);
-    formData.append("stock", product.stock);
     formData.append("category", product.category);
-    formData.append("color", product.color);
+    formData.append("date", product.date);
+    formData.append("price", product.price);
+    formData.append("contact", product.contact);
     formData.append("image", product.image);
 
     console.log("Product submitted: ", product);
@@ -67,13 +67,13 @@ const Cadastro = () => {
           <FaArrowLeft />
         </a>
         <h2 className="text-2xl font-bold mb-6 text-center">
-          Cadastrar Produto
+          Cadastrar Evento
         </h2>
         {/* informções para o cadastro */}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
-              Nome do Produto ou id
+              Nome do evento
             </label>
             <input
               type="text"
@@ -81,27 +81,13 @@ const Cadastro = () => {
               value={product.name}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite o nome do produto ou id"
+              placeholder="Digite o nome do evento"
             />
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
-              Preço
-            </label>
-            <input
-              type="number"
-              name="price"
-              value={product.price}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite o preço"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
-              Descrição do produto
+              Descrição do evento
             </label>
             <input
               type="text"
@@ -109,27 +95,13 @@ const Cadastro = () => {
               value={product.description}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite a descrição do produto"
+              placeholder="Digite a descrição do evento"
             />
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
-              Estoque
-            </label>
-            <input
-              type="text"
-              name="stock"
-              value={product.stock}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite o estoque do produto"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
-              Categoria
+              Categoria do evento
             </label>
             <input
               type="text"
@@ -137,27 +109,55 @@ const Cadastro = () => {
               value={product.category}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite a categoria"
+              placeholder="Digite o categoria do evento"
             />
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
-              Cor
+              Data do evento
+            </label>
+            <input
+              type="date"
+              name="date"
+              value={product.date}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite o dia do evento"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Preço do ingresso
+            </label>
+            <input
+              type="number"
+              name="price"
+              value={product.price}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite o valor do ingresso"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Contato
             </label>
             <input
               type="text"
-              name="color"
-              value={product.color}
+              name="contact"
+              value={product.contact}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite a cor do produto"
+              placeholder="Digite o seu contato"
             />
           </div>
 
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
-              Imagem do Produto
+              Imagem do evento
             </label>
             <input
               type="file"
@@ -184,7 +184,7 @@ const Cadastro = () => {
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
           >
-            Cadastrar Produto
+            Cadastrar Evento
           </button>
         </form>
       </div>
@@ -192,4 +192,4 @@ const Cadastro = () => {
   );
 };
 
-export default Cadastro;
+export default AdminEvents;

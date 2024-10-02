@@ -17,13 +17,13 @@ const EventRegister = () => {
   const isDisabled = runningCount === 0 && walkingCount === 0;
 
   return (
-    <div className="max-w-4xl mx-auto p-4 font-sans">
+    <div className="max-w-4xl mx-auto p-4 font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Banner de cima */}
-      <header className="bg-orange-500 text-white text-center py-4 mb-6">
+      <header className="bg-primary dark:bg-secondary text-white text-center py-4 mb-6">
         <h1 className="text-3xl font-bold">1ª CORRIDA PROANIMAL</h1>
       </header>
       {/* Busca a imagem do evento */}
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col md:flex-row gap-6 dark:bg-gray-700 rounded-lg">
         <div className="md:w-1/3">
           <img
             src="/api/placeholder/300/300"
@@ -43,14 +43,14 @@ const EventRegister = () => {
               <div className="flex items-center">
                 <button
                   onClick={() => setRunningCount(Math.max(0, runningCount - 1))}
-                  className="bg-orange-200 rounded-full p-1"
+                  className="bg-primary/20 rounded-full p-1"
                 >
                   <ChevronDown size={24} />
                 </button>
                 <span className="mx-2">{runningCount}</span>
                 <button
                   onClick={() => setRunningCount(runningCount + 1)}
-                  className="bg-orange-500 rounded-full p-1 text-white"
+                  className="bg-primary rounded-full p-1 text-white"
                 >
                   <ChevronUp size={24} />
                 </button>
@@ -65,14 +65,14 @@ const EventRegister = () => {
               <div className="flex items-center">
                 <button
                   onClick={() => setWalkingCount(Math.max(0, walkingCount - 1))}
-                  className="bg-orange-200 rounded-full p-1"
+                  className="bg-primary/20 rounded-full p-1"
                 >
                   <ChevronDown size={24} />
                 </button>
                 <span className="mx-2">{walkingCount}</span>
                 <button
                   onClick={() => setWalkingCount(walkingCount + 1)}
-                  className="bg-orange-500 rounded-full p-1 text-white"
+                  className="bg-primary rounded-full p-1 text-white"
                 >
                   <ChevronUp size={24} />
                 </button>
@@ -84,8 +84,8 @@ const EventRegister = () => {
             <button
               className={`flex-grow py-2 rounded ${
                 isDisabled
-                  ? "bg-green-300 text-gray-600 cursor-not-allowed"
-                  : "bg-green-500 text-white"
+                  ? "bg-secondary/50 text-gray-300 cursor-not-allowed"
+                  : "bg-secondary text-white"
               }`}
               disabled={isDisabled}
             >
@@ -97,15 +97,15 @@ const EventRegister = () => {
               </span>
             )}
           </div>
-          <button className="w-full bg-orange-500 text-white py-2 rounded mt-2">
+          <button className="w-full bg-primary text-white py-2 rounded mt-2">
             Já me inscrevi
           </button>
-          <button className="w-full bg-orange-500 text-white py-2 rounded mt-2">
+          <button className="w-full bg-primary text-white py-2 rounded mt-2">
             Regulamento
           </button>
         </div>
             {/* informações do evento */}
-        <div className="md:w-2/3">
+        <div className="md:w-2/3 p-2 rounded-lg dark:bg-gray-700">
           <h2 className="text-2xl font-bold mb-4">1ª CORRIDA PROANIMAL 5K</h2>
           <p className="mb-4">
             A 1ª CORRIDA PROANIMAL 5K é uma iniciativa da ONG Abrigo Mossoró

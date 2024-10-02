@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const EventCard = ({ event }) => (
-  <div className="bg-white rounded-lg shadow-md p-4">
+  <div className="bg-white rounded-lg shadow-md p-4 dark:bg-gray-400 dark:text-gray-900">
     {/* Cada event. busca as informações na const events e coloca automaticamente aqui */}
     <img
       src={event.image}
@@ -15,7 +15,7 @@ const EventCard = ({ event }) => (
     <p className="text-sm text-gray-600">{event.date}</p>
     <p className="text-sm text-gray-600">{event.location}</p>
     <a href="/eventos/register">
-      <button className="mt-4 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition">
+      <button className="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/60 transition dark:bg-secondary">
         Register
       </button>
     </a>
@@ -74,9 +74,9 @@ const EventsPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 h-[100%] dark:bg-gray-800 dark:text-white">
       <h1 className="text-3xl font-bold mb-8 text-center">Eventos</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 dark:text-gray-800">
         {currentEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}
@@ -86,7 +86,7 @@ const EventsPage = () => {
         <button
           onClick={prevPage}
           disabled={currentPage === 1}
-          className="mx-2 p-2 bg-orange-500 text-white rounded disabled:bg-gray-300"
+          className="mx-2 p-2 bg-primary text-white rounded disabled:bg-gray-300 dark:bg-secondary dark:disabled:bg-gray-300"
         >
           <ChevronLeft />
         </button>
@@ -96,7 +96,7 @@ const EventsPage = () => {
         <button
           onClick={nextPage}
           disabled={currentPage === totalPages}
-          className="mx-2 p-2 bg-orange-500 text-white rounded disabled:bg-gray-300"
+          className="mx-2 p-2 bg-primary text-white rounded disabled:bg-gray-300 dark:bg-secondary dark:disabled:bg-gray-300"
         >
           <ChevronRight />
         </button>

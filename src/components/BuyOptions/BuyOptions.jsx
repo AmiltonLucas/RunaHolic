@@ -51,8 +51,8 @@ const BuyOptions = () => {
                   className="mt-2 w-full"
                 />
                 <div className="flex justify-between text-sm">
-                  <span>$0</span>
-                  <span>$500</span>
+                  <span>R$ 0</span>
+                  <span>R$ 500</span>
                 </div>
               </div>
 
@@ -69,9 +69,10 @@ const BuyOptions = () => {
                   className="mt-2 block w-full rounded-md border border-gray-300 p-2 dark:bg-gray-600 dark:text-white"
                 >
                   <option value="">Todos</option>
-                  <option value="small">Pequeno</option>
-                  <option value="medium">Médio</option>
-                  <option value="large">Grande</option>
+                  <option value="small">P</option>
+                  <option value="medium">M</option>
+                  <option value="large">G</option>
+                  <option value="Xlarge">GG</option>
                 </select>
               </div>
               {/* Filtro de cores */}
