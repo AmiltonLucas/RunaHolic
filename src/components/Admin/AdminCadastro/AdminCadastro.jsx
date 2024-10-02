@@ -7,11 +7,14 @@ const Cadastro = () => {
   const [product, setProduct] = useState({
     name: "",
     price: "",
-    description: "",
-    stock: "",
     category: "",
-    color: "",
     image: null,
+    color: "",
+    sizes: "",
+    description: "",
+    highlights: "",
+    details: "",
+    stock: "",
   });
 
   //const pra carregar imagens
@@ -49,11 +52,14 @@ const Cadastro = () => {
     const formData = new FormData();
     formData.append("name", product.name);
     formData.append("price", product.price);
-    formData.append("description", product.description);
-    formData.append("stock", product.stock);
     formData.append("category", product.category);
-    formData.append("color", product.color);
     formData.append("image", product.image);
+    formData.append("color", product.color);
+    formData.append("sizes", product.sizes);
+    formData.append("description", product.description);
+    formData.append("highlights", product.highlights);
+    formData.append("details", product.details);
+    formData.append("stock", product.stock);
 
     console.log("Product submitted: ", product);
     // Aqui você pode adicionar a lógica para enviar o formulário para um servidor
@@ -101,34 +107,6 @@ const Cadastro = () => {
 
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
-              Descrição do produto
-            </label>
-            <input
-              type="text"
-              name="description"
-              value={product.description}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite a descrição do produto"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
-              Estoque
-            </label>
-            <input
-              type="text"
-              name="stock"
-              value={product.stock}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite o estoque do produto"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
               Categoria
             </label>
             <input
@@ -138,20 +116,6 @@ const Cadastro = () => {
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
               placeholder="Digite a categoria"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700 font-semibold mb-2">
-              Cor
-            </label>
-            <input
-              type="text"
-              name="color"
-              value={product.color}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              placeholder="Digite a cor do produto"
             />
           </div>
 
@@ -179,6 +143,90 @@ const Cadastro = () => {
               />
             </div>
           )}
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Cor
+            </label>
+            <input
+              type="text"
+              name="color"
+              value={product.color}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite a cor do produto"
+            />
+          </div>
+          
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Tamanho
+            </label>
+            <input
+              type="text"
+              name="sizes"
+              value={product.sizes}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite os tamanhos do produto"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Descrição do produto
+            </label>
+            <input
+              type="text"
+              name="description"
+              value={product.description}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite a descrição do produto"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Tecnologias do produto
+            </label>
+            <input
+              type="text"
+              name="highlights"
+              value={product.highlights}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite as tecnologias do produto"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Detalhes do produto
+            </label>
+            <input
+              type="text"
+              name="details"
+              value={product.details}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite os detalhes do produto"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-semibold mb-2">
+              Estoque
+            </label>
+            <input
+              type="text"
+              name="stock"
+              value={product.stock}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              placeholder="Digite o estoque do produto"
+            />
+          </div>
 
           <button
             type="submit"

@@ -18,19 +18,19 @@ const product = {
   // Fotos do produto
   images: [
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
+      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
       alt: "Two each of gray, white, and black shirts laying flat.",
     },
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
+      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
       alt: "Model wearing plain black basic tee.",
     },
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
+      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
       alt: "Model wearing plain gray basic tee.",
     },
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
+      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
       alt: "Model wearing plain white basic tee.",
     },
   ],
@@ -54,7 +54,7 @@ const product = {
   // descrição do produto
   description:
     'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
-    // Tecnologias do produto
+  // Tecnologias do produto
   highlights: [
     "Hand cut and sewn locally",
     "Dyed with our proprietary colors",
@@ -78,7 +78,7 @@ export default function Overviews() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-gray-800">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol
@@ -90,7 +90,7 @@ export default function Overviews() {
                 <div className="flex items-center">
                   <a
                     href={breadcrumb.href}
-                    className="mr-2 text-sm font-medium text-gray-900"
+                    className="mr-2 text-sm font-medium text-gray-900 dark:text-gray-100"
                   >
                     {breadcrumb.name}
                   </a>
@@ -111,7 +111,7 @@ export default function Overviews() {
               <a
                 href={product.href}
                 aria-current="page"
-                className="font-medium text-gray-500 hover:text-gray-600"
+                className="font-medium text-gray-500 hover:text-gray-600 dark:text-gray-300"
               >
                 {product.name}
               </a>
@@ -156,15 +156,15 @@ export default function Overviews() {
         {/* Informações do produto */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-3xl">
               {product.name}
             </h1>
           </div>
 
           {/* Opçoês de compra */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
-            <h2 className="sr-only">Product information</h2>
-            <p className="text-3xl tracking-tight text-gray-900">
+            <h2 className="sr-only ">Product information</h2>
+            <p className="text-3xl tracking-tight text-gray-900 dark:text-gray-200">
               {product.price}
             </p>
 
@@ -179,7 +179,7 @@ export default function Overviews() {
                       aria-hidden="true"
                       className={classNames(
                         reviews.average > rating
-                          ? "text-gray-900"
+                          ? "text-yellow-400"
                           : "text-gray-200",
                         "h-5 w-5 flex-shrink-0"
                       )}
@@ -189,7 +189,7 @@ export default function Overviews() {
                 <p className="sr-only">{reviews.average} out of 5 stars</p>
                 <a
                   href={reviews.href}
-                  className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                  className="ml-3 text-sm font-medium text-primary hover:text-primary/60 dark:text-secondary dark:hover:text-secondary/60"
                 >
                   {reviews.totalCount} reviews
                 </a>
@@ -199,7 +199,9 @@ export default function Overviews() {
             <form className="mt-10">
               {/* Cores disponiveis */}
               <div>
-                <h3 className="text-sm font-medium text-gray-900">Color</h3>
+                <h3 className="text-sm font-medium text-gray-900 dark:text-gray-200">
+                  Color
+                </h3>
 
                 <fieldset aria-label="Choose a color" className="mt-4">
                   <RadioGroup
@@ -233,10 +235,12 @@ export default function Overviews() {
               {/* Tamanhos disponiveis */}
               <div className="mt-10">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-medium text-gray-900">Size</h3>
+                  <h3 className="text-sm font-medium text-gray-900  dark:text-gray-200">
+                    Size
+                  </h3>
                   <a
                     href="#"
-                    className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                    className="text-sm font-medium text-primary hover:text-primary/60 dark:text-secondary dark:hover:text-secondary/60"
                   >
                     Size guide
                   </a>
@@ -255,8 +259,8 @@ export default function Overviews() {
                         disabled={!size.inStock}
                         className={classNames(
                           size.inStock
-                            ? "cursor-pointer bg-white text-gray-900 shadow-sm"
-                            : "cursor-not-allowed bg-gray-50 text-gray-200",
+                            ? "cursor-pointer bg-white text-gray-900 dark:bg-gray-600 dark:text-gray-200 shadow-sm"
+                            : "cursor-not-allowed bg-gray-50 text-gray-200 dark:bg-gray-300 dark:text-gray-400",
                           "group relative flex items-center justify-center rounded-md border px-4 py-3 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none data-[focus]:ring-2 data-[focus]:ring-indigo-500 sm:flex-1 sm:py-6"
                         )}
                       >
@@ -264,7 +268,7 @@ export default function Overviews() {
                         {size.inStock ? (
                           <span
                             aria-hidden="true"
-                            className="pointer-events-none absolute -inset-px rounded-md border-2 border-transparent group-data-[focus]:border group-data-[checked]:border-indigo-500"
+                            className="pointer-events-none absolute -inset-px rounded-md border-2 border-transparent group-data-[focus]:border group-data-[checked]:border-primary/60 dark:group-data-[checked]:border-secondary/60"
                           />
                         ) : (
                           <span
@@ -292,12 +296,12 @@ export default function Overviews() {
                   </RadioGroup>
                 </fieldset>
               </div>
-                {/* Adicionanr ao carrinho */}
+              {/* Adicionanr ao carrinho */}
               <button
                 type="submit"
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-primary dark:bg-secondary px-8 py-3 text-base font-medium text-white hover:bg-primary/70 dark:hover:bg-secondary/70  focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2"
               >
-                Add to bag
+                Adicionar ao carrinho
               </button>
             </form>
           </div>
@@ -308,18 +312,27 @@ export default function Overviews() {
               <h3 className="sr-only">Description</h3>
 
               <div className="space-y-6">
-                <p className="text-base text-gray-900">{product.description}</p>
+                <p className="text-base text-gray-900  dark:text-gray-300">
+                  {product.description}
+                </p>
               </div>
             </div>
 
             <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
+              <h3 className="text-sm font-medium text-gray-900  dark:text-gray-200">
+                Tecnologias
+              </h3>
 
               <div className="mt-4">
                 <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
                   {product.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
-                      <span className="text-gray-600">{highlight}</span>
+                    <li
+                      key={highlight}
+                      className="text-gray-400  dark:text-gray-400"
+                    >
+                      <span className="text-gray-600  dark:text-gray-200">
+                        {highlight}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -327,10 +340,14 @@ export default function Overviews() {
             </div>
 
             <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
+              <h2 className="text-sm font-medium text-gray-900 dark:text-gray-200">
+                Detalhes
+              </h2>
 
               <div className="mt-4 space-y-6">
-                <p className="text-sm text-gray-600">{product.details}</p>
+                <p className="text-sm text-gray-600  dark:text-gray-200">
+                  {product.details}
+                </p>
               </div>
             </div>
           </div>
