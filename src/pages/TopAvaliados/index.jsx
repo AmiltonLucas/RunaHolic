@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/NavBar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import BuyOptions from "../../components/BuyOptions/BuyOptions";
+import OpcoesProdutos from "../../components/OpcoesProdutos/OpcoesProdutos";
 
 const TopAvaliados = () => {
   return (
@@ -10,7 +10,7 @@ const TopAvaliados = () => {
       <h1 className="p-[1rem] text-3xl text-center dark:text-white dark:bg-gray-900">
         Top Avaliados
       </h1>
-      <BuyOptions />
+      <OpcoesProdutos />
       <Footer />
     </>
   );

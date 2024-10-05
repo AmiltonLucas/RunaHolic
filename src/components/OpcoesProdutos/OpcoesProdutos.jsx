@@ -1,7 +1,7 @@
 // importações necessárias
 import React from "react";
 
-const BuyOptions = () => {
+const OpcoesProdutos = () => {
   return (
     <div className="dark:bg-gray-900 dark:text-white">
       {/* Container principal  */}
@@ -137,9 +137,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">Tênis de Corrida</h3>
               <p className="text-gray-600 dark:text-white">R$320</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
 
             <div className="rounded-lg bg-white p-4 shadow dark:bg-gray-700 dark:text-white">
@@ -150,9 +152,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
 
             <div className="rounded-lg bg-white p-4 shadow dark:bg-gray-700 dark:text-white">
@@ -163,9 +167,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
 
             <div className="rounded-lg bg-white p-4 shadow dark:bg-gray-700 dark:text-white">
@@ -176,9 +182,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
 
             <div className="rounded-lg bg-white p-4 shadow dark:bg-gray-700 dark:text-white">
@@ -189,9 +197,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
 
             <div className="rounded-lg bg-white p-4 shadow dark:bg-gray-700 dark:text-white">
@@ -202,9 +212,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
 
             <div className="rounded-lg bg-white p-4 shadow dark:bg-gray-700 dark:text-white">
@@ -215,9 +227,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
 
             <div className="rounded-lg bg-white p-4 shadow dark:bg-gray-700 dark:text-white">
@@ -228,9 +242,11 @@ const BuyOptions = () => {
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
-              <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                Comprar
-              </button>
+              <a href="/produto">
+                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Comprar
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -239,4 +255,4 @@ const BuyOptions = () => {
   );
 };
 
-export default BuyOptions;
+export default OpcoesProdutos;

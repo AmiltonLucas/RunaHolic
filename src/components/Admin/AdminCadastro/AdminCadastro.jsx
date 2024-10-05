@@ -1,5 +1,5 @@
 // importações necessárias
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
 // informações para cadastro
@@ -19,6 +19,11 @@ const Cadastro = () => {
 
   //const pra carregar imagens
   const [previewImage, setPreviewImage] = useState(null);
+
+  // Refs para os textareas de descrição, highlights e detalhes
+  const textareaRefDescription = useRef(null);
+  const textareaRefHighlights = useRef(null);
+  const textareaRefDetails = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,6 +69,28 @@ const Cadastro = () => {
     console.log("Product submitted: ", product);
     // Aqui você pode adicionar a lógica para enviar o formulário para um servidor
   };
+
+  // Ajusta a altura do textarea ao conteúdo
+  useEffect(() => {
+    if (textareaRefDescription.current) {
+      textareaRefDescription.current.style.height = "auto"; // Redefine a altura para auto
+      textareaRefDescription.current.style.height = `${textareaRefDescription.current.scrollHeight}px`; // Ajusta a altura ao conteúdo
+    }
+  }, [product.description]); // Executa o efeito sempre que a descrição mudar
+
+  useEffect(() => {
+    if (textareaRefHighlights.current) {
+      textareaRefHighlights.current.style.height = "auto"; // Redefine a altura para auto
+      textareaRefHighlights.current.style.height = `${textareaRefHighlights.current.scrollHeight}px`; // Ajusta a altura ao conteúdo
+    }
+  }, [product.highlights]); // Executa o efeito sempre que highlights mudar
+
+  useEffect(() => {
+    if (textareaRefDetails.current) {
+      textareaRefDetails.current.style.height = "auto"; // Redefine a altura para auto
+      textareaRefDetails.current.style.height = `${textareaRefDetails.current.scrollHeight}px`; // Ajusta a altura ao conteúdo
+    }
+  }, [product.details]); // Executa o efeito sempre que details mudar
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
@@ -157,7 +184,7 @@ const Cadastro = () => {
               placeholder="Digite a cor do produto"
             />
           </div>
-          
+
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2">
               Tamanho
@@ -176,13 +203,14 @@ const Cadastro = () => {
             <label className="block text-gray-700 font-semibold mb-2">
               Descrição do produto
             </label>
-            <input
-              type="text"
+            <textarea
+              ref={textareaRefDescription} // Atribui a referência ao textarea de descrição
               name="description"
               value={product.description}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 resize-none" // 'resize-none' para desativar o redimensionamento manual
               placeholder="Digite a descrição do produto"
+              rows={1} // Inicializa com uma linha
             />
           </div>
 
@@ -190,13 +218,14 @@ const Cadastro = () => {
             <label className="block text-gray-700 font-semibold mb-2">
               Tecnologias do produto
             </label>
-            <input
-              type="text"
+            <textarea
+              ref={textareaRefHighlights} // Atribui a referência ao textarea de highlights
               name="highlights"
               value={product.highlights}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 resize-none" // 'resize-none' para desativar o redimensionamento manual
               placeholder="Digite as tecnologias do produto"
+              rows={1} // Inicializa com uma linha
             />
           </div>
 
@@ -204,13 +233,14 @@ const Cadastro = () => {
             <label className="block text-gray-700 font-semibold mb-2">
               Detalhes do produto
             </label>
-            <input
-              type="text"
+            <textarea
+              ref={textareaRefDetails} // Atribui a referência ao textarea de detalhes
               name="details"
               value={product.details}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 resize-none" // 'resize-none' para desativar o redimensionamento manual
               placeholder="Digite os detalhes do produto"
+              rows={1} // Inicializa com uma linha
             />
           </div>
 

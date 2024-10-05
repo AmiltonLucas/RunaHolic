@@ -53,7 +53,7 @@ const ProductsData = [
 
 const ProductsMasculinos = () => {
   return (
-    <div className="mt-14 mb-12 dark:bg-gray-900 dark:text-white">
+    <div className="mt-14 mb-14 dark:bg-gray-900 dark:text-white">
       <div className="container dark:bg-gray-900 dark:text-white">
         {/* Seção de texto */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
@@ -67,8 +67,7 @@ const ProductsMasculinos = () => {
             data-aos="fade-up"
             className="text-xs text-gray-400 dark:text-gray-300"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+            Seleção de produtos masculinos mais vendidos
           </p>
         </div>
         {/* Seção corpo */}

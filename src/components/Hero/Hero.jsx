@@ -1,7 +1,7 @@
 import React from "react";
-import Image1 from "../../assets/hero/logo.png";
-import Image2 from "../../assets/hero/shopping.png";
-import Image3 from "../../assets/hero/sale.png";
+import Image1 from "../../assets/hero/men.png";
+import Image2 from "../../assets/hero/logo.png";
+import Image3 from "../../assets/hero/camisaeshort.png";
 import Slider from "react-slick";
 
 // Lista de informações do slider
@@ -11,21 +11,21 @@ const ImageList = [
     img: Image1,
     title: "Até 50% de desconto em todas as roupas masculinas",
     description:
-      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Essa é a sua chance de renovar o guarda-roupa com estilo e economizar ao mesmo tempo.",
   },
   {
     id: 2,
     img: Image2,
-    title: "30% off on all Women's Wear",
+    title: "30% de desconto em todas as roupas femininas",
     description:
-      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Nossa coleção traz as últimas tendências em moda feminina, com peças que valorizam o seu visual em qualquer ocasião.",
   },
   {
     id: 3,
     img: Image3,
-    title: "70% off on all Products Sale",
+    title: "Compre 3 camisas e ganhe 1 short grátis! ",
     description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Aproveite essa promoção exclusiva e renove seu guarda-roupa com muito mais estilo. Escolha suas camisas favoritas e leve um short para completar o visual sem custo adicional.",
   },
 ];
 

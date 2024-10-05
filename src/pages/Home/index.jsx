@@ -6,7 +6,7 @@ import TopProducts from "../../components/TopProducts/TopProducts";
 import Banner from "../../components/Banner/Banner";
 import Products from "../../components/Products/Products";
 import ProductsMasculinos from "../../components/Products/ProductsMasculinos";
-import Testimonials from "../../components/TestimonialData/TestimonialData";
+import Avaliacoes from "../../components/Avaliacoes/Avaliacoes";
 import Footer from "../../components/Footer/Footer";
 import Popup from "../../components/Popup/Popup";
 
@@ -20,7 +20,7 @@ const Home = () => {
       <Banner />
       <Products />
       <ProductsMasculinos />
-      <Testimonials />
+      <Avaliacoes />
       <Footer />
       <Popup />
     </div>

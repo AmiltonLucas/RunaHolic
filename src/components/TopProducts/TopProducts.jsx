@@ -12,28 +12,28 @@ const ProductsData = [
     img: Img1,
     title: "Top cropped",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Leve e estiloso, nosso top cropped oferece suporte ideal para seus treinos",
   },
   {
     id: 2,
     img: Img2,
     title: "Short de corrida",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Desenvolvido para os apaixonados por corrida, o short de corrida é fabricado com material leve e de secagem rápida. ",
   },
   {
     id: 3,
     img: Img3,
     title: "Conjunto Alexa",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "O conjunto Alexa é a combinação perfeita de conforto e elegância para o dia a dia ou atividades físicas. Composto por top e legging de tecido suave e flexível.",
   },
 ];
 
 const TopProducts = ({ handleOrderPopup }) => {
   return (
     <div>
-      <div className="container">
+      <div className="container mt-10 mb-10">
         {/* seção de textos */}
         <div className="text-left mb-24">
           <p data-aos="fade-up" className="text-sm text-primary">

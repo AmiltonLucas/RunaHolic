@@ -82,8 +82,8 @@ function Sobre() {
               Runaholic <br /> a sua loja esportiva favorita
             </h1>
             <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
-              This year, our new summer collection will shelter you from the
-              harsh elements of a world that doesn't care if you live or die.
+              A Runaholic é mais do que uma loja esportiva, é um ponto de
+              encontro para apaixonados por corrida.
             </p>
           </div>
           <div>
@@ -154,7 +154,7 @@ function Sobre() {
                   </div>
                 </div>
               </div>
-                {/* Botão de descobrir mais, leva para a pagina sobre nós */}
+              {/* Botão de descobrir mais, leva para a pagina sobre nós */}
               <a
                 href="/sobrenos"
                 className="inline-block rounded-md border border-transparent bg-secondary px-8 py-3 text-center font-medium text-white hover:bg-secondary/70 dark:bg-primary"

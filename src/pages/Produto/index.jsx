@@ -1,16 +1,16 @@
 import React from "react";
-import Overviews from "../../components/Overviews/Overviews";
 import Navbar from "../../components/NavBar/Navbar";
+import ProdutoPage from "../../components/ProdutoPage/ProdutoPage";
 import Footer from "../../components/Footer/Footer";
 
-const ProductOverviews = () => {
+const Produto = () => {
   return (
     <>
       <Navbar />
-      <Overviews />
+      <ProdutoPage />
       <Footer />
     </>
   );
 };
 
-export default ProductOverviews;
+export default Produto;

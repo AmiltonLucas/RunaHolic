@@ -6,7 +6,7 @@ import TopAvaliados from "./pages/TopAvaliados";
 import Infantil from "./pages/Infantil";
 import Masculino from "./pages/Masculino";
 import Feminino from "./pages/Feminino";
-import Productoverviews from "./pages/Overviews";
+import Produto from "./pages/Produto";
 import SobreNos from "./pages/SobreNós";
 import Eventos from "./pages/Eventos";
 import EventRegister from "./pages/EventosRegister";
@@ -17,6 +17,7 @@ import AdminConfig from "./components/Admin/AdminConfig/AdminConfig";
 import AdminRelatorios from "./components/Admin/AdminRelatórios/AdminRelatórios";
 import AdminUsers from "./components/Admin/AdminUsers/AdminUsers";
 import AdminEvents from "./components/Admin/AdminEvents/AdminEvents";
+import LojasPage from "./pages/Lojas";
 
 function AppRoutes() {
   return (
@@ -31,10 +32,11 @@ function AppRoutes() {
           <Route path="/infantil" element={<Infantil />}></Route>
           <Route path="/masculino" element={<Masculino />}></Route>
           <Route path="/feminino" element={<Feminino />}></Route>
-          <Route path="/produto" element={<Productoverviews />}></Route>
+          <Route path="/produto" element={<Produto />}></Route>
           <Route path="/eventos" element={<Eventos />}></Route>
           <Route path="/eventos/register" element={<EventRegister />}></Route>
           <Route path="/sobrenos" element={<SobreNos />}></Route>
+          <Route path="/lojas" element={<LojasPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
           {/* Admin routes */}
           <Route path="/admin" element={<AdminPage />}></Route>
