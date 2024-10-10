@@ -6,7 +6,7 @@ const Page404 = () => {
     {/* Page 404 */}
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
-          <p className="font-semibold text-2xl text-secondary">404</p>
+          <p className="font-semibold text-2xl text-primary">404</p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Página não encontrada!
           </h1>
@@ -16,7 +16,7 @@ const Page404 = () => {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="/"
-              className="rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-secondary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary/60"
+              className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary/60"
             >
               Volte para home
             </a>

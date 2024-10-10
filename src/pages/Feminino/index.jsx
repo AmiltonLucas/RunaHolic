@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../components/NavBar/Navbar";
-import Footer from "../../components/Footer/Footer";
-import OpcoesProdutos from "../../components/OpcoesProdutos/OpcoesProdutos";
+import Navbar from "../../Components/NavBar/Navbar";
+import Footer from "../../Components/Footer/Footer";
+import OpcoesProdutos from "../../Components/OpcoesProdutos/OpcoesProdutos";
 
 const Feminino = () => {
   return (

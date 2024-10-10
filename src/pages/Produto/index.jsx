@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../components/NavBar/Navbar";
-import ProdutoPage from "../../components/ProdutoPage/ProdutoPage";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../../Components/NavBar/Navbar";
+import ProdutoPage from "../../Components/ProdutoPage/ProdutoPage";
+import Footer from "../../Components/Footer/Footer";
 
 const Produto = () => {
   return (

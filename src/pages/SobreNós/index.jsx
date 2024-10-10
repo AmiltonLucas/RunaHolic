@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../components/NavBar/Navbar";
-import Footer from "../../components/Footer/Footer";
-import SobreNosContainer from "../../components/SobreNos/SobreNos";
+import Navbar from "../../Components/NavBar/Navbar";
+import Footer from "../../Components/Footer/Footer";
+import SobreNosContainer from "../../Components/SobreNos/SobreNos";
 
 const SobreNos = () => {
   return (

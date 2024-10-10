@@ -1,23 +1,25 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import TopAvaliados from "./pages/TopAvaliados";
-import Infantil from "./pages/Infantil";
-import Masculino from "./pages/Masculino";
-import Feminino from "./pages/Feminino";
-import Produto from "./pages/Produto";
-import SobreNos from "./pages/SobreNós";
-import Eventos from "./pages/Eventos";
-import EventRegister from "./pages/EventosRegister";
-import Page404 from "./pages/Page404";
-import AdminPage from "./pages/Admin";
-import AdminCadastro from "./components/Admin/AdminCadastro/AdminCadastro";
-import AdminConfig from "./components/Admin/AdminConfig/AdminConfig";
-import AdminRelatorios from "./components/Admin/AdminRelatórios/AdminRelatórios";
-import AdminUsers from "./components/Admin/AdminUsers/AdminUsers";
-import AdminEvents from "./components/Admin/AdminEvents/AdminEvents";
-import LojasPage from "./pages/Lojas";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import TopAvaliados from "./Pages/TopAvaliados";
+import Infantil from "./Pages/Infantil";
+import Masculino from "./Pages/Masculino";
+import Feminino from "./Pages/Feminino";
+import Produto from "./Pages/Produto";
+import SobreNos from "./Pages/SobreNós";
+import Eventos from "./Pages/Eventos";
+import EventRegister from "./Pages/EventosRegister";
+import Page404 from "./Pages/Page404";
+import AdminPage from "./Pages/Admin";
+import AdminCadastro from "./Components/Admin/AdminCadastro/AdminCadastro";
+import AdminConfig from "./Components/Admin/AdminConfig/AdminConfig";
+import AdminRelatorios from "./Components/Admin/AdminRelatórios/AdminRelatórios";
+import AdminUsers from "./Components/Admin/AdminUsers/AdminUsers";
+import AdminEvents from "./Components/Admin/AdminEvents/AdminEvents";
+import LojasPage from "./Pages/Lojas";
+import LoginRegister from "./Pages/LoginRegister";
+import PesquisaPage from "./Pages/PesquisaPage/Index";
 
 function AppRoutes() {
   return (
@@ -28,6 +30,8 @@ function AppRoutes() {
           {/* Users routes */}
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/criarconta" element={<LoginRegister />}></Route>
+          <Route path="/pesquisa" element={<PesquisaPage />}></Route>
           <Route path="/topavaliados" element={<TopAvaliados />}></Route>
           <Route path="/infantil" element={<Infantil />}></Route>
           <Route path="/masculino" element={<Masculino />}></Route>

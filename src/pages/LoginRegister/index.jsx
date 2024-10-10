@@ -1,16 +1,16 @@
 import React from "react";
-import LoginPage from "../../Components/LoginPage/LoginPage";
+import RegisterPage from "../../Components/ResgisterPage/RegisterPage";
 import Navbar from "../../Components/NavBar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 
-const Login = () => {
+const LoginRegister = () => {
   return (
     <>
       <Navbar />
-      <LoginPage />
+      <RegisterPage />
       <Footer />
     </>
   );
 };
 
-export default Login;
+export default LoginRegister;

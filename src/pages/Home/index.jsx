@@ -1,14 +1,14 @@
 import React from "react";
-import Navbar from "../../components/NavBar/Navbar";
-import Hero from "../../components/Hero/Hero";
-import Sobre from "../../components/Sobre/Sobre";
-import TopProducts from "../../components/TopProducts/TopProducts";
-import Banner from "../../components/Banner/Banner";
-import Products from "../../components/Products/Products";
-import ProductsMasculinos from "../../components/Products/ProductsMasculinos";
-import Avaliacoes from "../../components/Avaliacoes/Avaliacoes";
-import Footer from "../../components/Footer/Footer";
-import Popup from "../../components/Popup/Popup";
+import Navbar from "../../Components/NavBar/Navbar";
+import Hero from "../../Components/Hero/Hero";
+import Sobre from "../../Components/Sobre/Sobre";
+import TopProducts from "../../Components/TopProducts/TopProducts";
+import Banner from "../../Components/Banner/Banner";
+import Products from "../../Components/Products/Products";
+import ProductsMasculinos from "../../Components/Products/ProductsMasculinos";
+import Avaliacoes from "../../Components/Avaliacoes/Avaliacoes";
+import Footer from "../../Components/Footer/Footer";
+import Popup from "../../Components/Popup/Popup";
 
 const Home = () => {
   return (

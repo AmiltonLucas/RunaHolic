@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../components/NavBar/Navbar";
-import EventRegister from "../../components/EventosRegistro/EventosRegistro";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../../Components/NavBar/Navbar";
+import EventRegister from "../../Components/EventosRegistro/EventosRegistro";
+import Footer from "../../Components/Footer/Footer";
 
 const EventsRegister = () => {
   return (

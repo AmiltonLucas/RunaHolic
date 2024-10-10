@@ -1,16 +1,16 @@
 import React from "react";
-import Lojas from "../../components/Lojas/Lojas";
-import Navbar from "../../components/NavBar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import Lojas from "../../Components/Lojas/Lojas";
+import Navbar from "../../Components/NavBar/Navbar";
+import Footer from "../../Components/Footer/Footer";
 
 const LojasPage = () => {
-    return (
-        <>
-        <Navbar />
-        <Lojas />
-        <Footer />
-        </>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <Lojas />
+      <Footer />
+    </>
+  );
+};
 
 export default LojasPage;
