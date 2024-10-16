@@ -11,15 +11,15 @@ import SobreNos from "./Pages/SobreNós";
 import Eventos from "./Pages/Eventos";
 import EventRegister from "./Pages/EventosRegister";
 import Page404 from "./Pages/Page404";
-import AdminPage from "./Pages/Admin";
-import AdminCadastro from "./Components/Admin/AdminCadastro/AdminCadastro";
-import AdminConfig from "./Components/Admin/AdminConfig/AdminConfig";
-import AdminRelatorios from "./Components/Admin/AdminRelatórios/AdminRelatórios";
-import AdminUsers from "./Components/Admin/AdminUsers/AdminUsers";
-import AdminEvents from "./Components/Admin/AdminEvents/AdminEvents";
+import UserPage from "./Pages/User";
 import LojasPage from "./Pages/Lojas";
 import LoginRegister from "./Pages/LoginRegister";
 import PesquisaPage from "./Pages/PesquisaPage/Index";
+import UserPessoalData from "./Components/User/UserPessoalData/UserPessoalData";
+import UserAccountData from "./Components/User/UserAccountData/UserAccountData";
+import UserSecurity from "./Components/User/UserSecurity/UserSecurity";
+import UserCards from "./Components/User/UserCards/UserCards";
+import UserLocation from "./Components/User/UserLocation/UserLocation";
 
 function AppRoutes() {
   return (
@@ -42,19 +42,13 @@ function AppRoutes() {
           <Route path="/sobrenos" element={<SobreNos />}></Route>
           <Route path="/lojas" element={<LojasPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
-          {/* Admin routes */}
-          <Route path="/admin" element={<AdminPage />}></Route>
-          <Route
-            path="/admin/cadastro-produtos"
-            element={<AdminCadastro />}
-          ></Route>
-          <Route
-            path="/admin/cadastro-eventos"
-            element={<AdminEvents />}
-          ></Route>
-          <Route path="/admin/config" element={<AdminConfig />}></Route>
-          <Route path="/admin/relatorios" element={<AdminRelatorios />}></Route>
-          <Route path="/admin/users" element={<AdminUsers />}></Route>
+          {/* User config routes */}
+          <Route path="/user" element={<UserPage />}></Route>
+          <Route path="/user/pessoal-data" element={<UserPessoalData />}></Route>
+          <Route path="/user/conta-data" element={<UserAccountData />}></Route>
+          <Route path="/user/seguranca" element={<UserSecurity />}></Route>
+          <Route path="/user/cartoes" element={<UserCards />}></Route>
+          <Route path="/user/localizacao" element={<UserLocation />}></Route>
         </Routes>
       </BrowserRouter>
     </>

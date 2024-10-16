@@ -1,8 +1,9 @@
 // importações necessárias
 import React from "react";
-import Sidebar from "../AdminSidebar/AdminSidebar";
+import { FaArrowLeft } from "react-icons/fa";
+import Sidebar from "../UserSidebar/UserSidebar";
 
-function AdminDashboard() {
+export default function UserLocation() {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Menu lateral */}
@@ -11,12 +12,14 @@ function AdminDashboard() {
       {/* Área principal */}
       <div className="flex flex-col flex-1">
         <main className="flex-1 p-6 bg-white">
-          <h2>Admin Dashboard</h2>
+          <a href="/user" className="mb-5 flex gap-2">
+            <FaArrowLeft />
+          </a>
+          <h1 className="text-3xl font-bold">Dados de localização</h1>
+          <p className="mt-4">Aqui você pode alterar de endereços</p>
           {/* Coloque o conteúdo adicional da área principal aqui */}
         </main>
       </div>
     </div>
   );
 }
-
-export default AdminDashboard;

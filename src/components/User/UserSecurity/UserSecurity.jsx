@@ -1,9 +1,9 @@
 // importações necessárias
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
-import Sidebar from '../AdminSidebar/AdminSidebar';
+import Sidebar from '../UserSidebar/UserSidebar';
 
-const AdminUsers = () =>  {
+export default function UserSecurity() {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Menu lateral */}
@@ -12,14 +12,12 @@ const AdminUsers = () =>  {
       {/* Área principal */}
       <div className="flex flex-col flex-1">
         <main className="flex-1 p-6 bg-white">
-        <a href="/admin" className='mb-5 flex gap-2'><FaArrowLeft /></a>
-          <h1 className="text-3xl font-bold">Usuários</h1>
-          <p className="mt-4">Aqui você pode gerenciar suas informações de Usuários.</p>
+        <a href="/user" className='mb-5 flex gap-2'><FaArrowLeft /></a>
+          <h1 className="text-3xl font-bold">Segurança</h1>
+          <p className="mt-4">Aqui você pode alterar dados de segurança</p>
           {/* Coloque o conteúdo adicional da área principal aqui */}
         </main>
       </div>
     </div>
   );
 }
-
-export default AdminUsers;
