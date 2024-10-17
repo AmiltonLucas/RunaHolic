@@ -17,6 +17,7 @@ import {
 } from "@headlessui/react";
 import {
   Bars3Icon,
+  BellIcon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
   XMarkIcon,
@@ -27,6 +28,14 @@ import Shorts from "../../assets/NavBar/shorts.jpg";
 import TopCropped from "../../assets/NavBar/topcropped.jpg";
 import Camisas from "../../assets/NavBar/camisas.jpeg";
 import ShortMasculino from "../../assets/NavBar/shortsMasculino.jpeg";
+
+const user = {
+  name: "Tom Cook",
+  email: "tom@example.com",
+  imageUrl:
+    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+};
+
 
 // Informações dentro do dropdown
 const navigation = {
@@ -91,8 +100,7 @@ const navigation = {
           name: "Novas Camisas",
           href: "#",
           imageSrc: Camisas,
-          imageAlt:
-            "Camisas de alta qualidade e conforto padrão RunaHolic",
+          imageAlt: "Camisas de alta qualidade e conforto padrão RunaHolic",
         },
         {
           name: "Shorts de corrida",
@@ -289,31 +297,40 @@ export default function Navbar() {
                 </div>
               ))}
             </div>
-              {/* Login de conta mobile */}
-            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-              <div className="flow-root">
-                <a
-                  href="/login"
-                  className="-m-2 block p-2 font-medium text-gray-900 dark:text-gray-100"
-                >
-                  Entrar
-                </a>
-              </div>
-              <div className="flow-root">
-                <a
-                  href="/login"
-                  className="-m-2 block p-2 font-medium text-gray-900 dark:text-gray-100"
-                >
-                  Crie uma conta
-                </a>
-              </div>
-            </div>
+            {/* Login de conta mobile */}
+            <a href="/user">
+              <div className="flex items-center px-5">
+                  <div className="flex-shrink-0">
+                    <img
+                      alt=""
+                      src={user.imageUrl}
+                      className="h-10 w-10 rounded-full"
+                    />
+                  </div>
+                  <div className="ml-3">
+                    <div className="text-base font-medium leading-none text-gray-600 dark:text-gray-100">
+                      {user.name}
+                    </div>
+                    <div className="text-sm font-medium leading-none text-gray-400 dark:text-gray-300">
+                      {user.email}
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  >
+                    <span className="absolute -inset-1.5" />
+                    <span className="sr-only">View notifications</span>
+                    <BellIcon aria-hidden="true" className="h-6 w-6" />
+                  </button>
+                </div>
+            </a>
           </DialogPanel>
         </div>
       </Dialog>
 
       <header className="relative bg-primary/80 dark:bg-secondary">
-      {/* informação no topo da navbar */}
+        {/* informação no topo da navbar */}
         <p className="flex h-10 items-center justify-center px-4 text-sm font-mediu text-white sm:px-6 lg:px-8">
           Frete gratís apartir de R$ 450
         </p>
@@ -441,40 +458,38 @@ export default function Navbar() {
                   ))}
                 </div>
               </PopoverGroup>
-                  {/* Login desktop */}
+              {/* Login desktop */}
               <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a
-                    href="/login"
-                    className="text-sm font-medium hover:text-gray-200 text-gray-100 dark:hover:text-gray-400"
-                  >
-                    Entre
-                  </a>
-                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
-                  <a
-                    href="/login"
-                    className="text-sm font-medium hover:text-gray-200 text-gray-100 dark:hover:text-gray-400"
-                  >
-                    Crie uma conta
-                  </a>
-                </div>
+                <a href="/user">
+                  <div className="hidden items-center px-5 lg:flex">
+                    <div className="flex-shrink-0">
+                      <img
+                        alt=""
+                        src={user.imageUrl}
+                        className="h-10 w-10 rounded-full"
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-base font-medium leading-none text-white">
+                        {user.name}
+                      </div>
+                      <div className="text-sm font-medium leading-none text-gray-200 dark:text-white">
+                        {user.email}
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      className="relative ml-2 flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    >
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">View notifications</span>
+                      <BellIcon aria-hidden="true" className="h-6 w-6" />
+                    </button>
+                  </div>
+                </a>
 
                 <div className="ml-5">
                   <DarkMode />
-                </div>
-
-                {/* Barra de pesquisa*/}
-                <div className="flex lg:ml-6">
-                  <a
-                    href="#"
-                    className="p-2 hover:text-gray-200 text-gray-100 dark:hover:text-gray-300"
-                  >
-                    <span className="sr-only">Pesquisar</span>
-                    <MagnifyingGlassIcon
-                      aria-hidden="true"
-                      className="h-6 w-6"
-                    />
-                  </a>
                 </div>
 
                 {/* Carrinho */}
