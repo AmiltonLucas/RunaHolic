@@ -482,7 +482,7 @@ export default function Navbar() {
               <div className="ml-auto flex items-center">
                 {/* Login desktop quando deslogado*/}
                 <div className="ml-auto flex items-center">
-                  <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  <div className="hidden sm:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 p-2 gap-2">
                     <a
                       href="/login"
                       className="text-sm font-medium text-gray-200 hover:text-gray-300"
