@@ -36,7 +36,6 @@ const user = {
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 };
 
-
 // Informações dentro do dropdown
 const navigation = {
   categories: [
@@ -205,6 +204,55 @@ export default function Navbar() {
               </button>
             </div>
 
+            {/* Login de conta mobile sem tá logado */}
+            <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+              <div className="flow-root">
+                <a
+                  href="/login"
+                  className="-m-2 block p-2 font-medium text-gray-900"
+                >
+                  Entrar
+                </a>
+              </div>
+              <div className="flow-root">
+                <a
+                  href="/criarconta"
+                  className="-m-2 block p-2 font-medium text-gray-900"
+                >
+                  Crie uma conta
+                </a>
+              </div>
+            </div>
+
+            {/* Login de conta mobile logado */}
+            <a href="/user">
+              <div className="flex items-center px-5">
+                <div className="flex-shrink-0">
+                  <img
+                    alt=""
+                    src={user.imageUrl}
+                    className="h-10 w-10 rounded-full"
+                  />
+                </div>
+                <div className="ml-3">
+                  <div className="text-base font-medium leading-none text-gray-600 dark:text-gray-100">
+                    {user.name}
+                  </div>
+                  <div className="text-sm font-medium leading-none text-gray-400 dark:text-gray-300">
+                    {user.email}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">View notifications</span>
+                  <BellIcon aria-hidden="true" className="h-6 w-6" />
+                </button>
+              </div>
+            </a>
+
             {/* Links */}
             <TabGroup className="mt-2">
               <div className="border-b border-gray-200">
@@ -297,34 +345,6 @@ export default function Navbar() {
                 </div>
               ))}
             </div>
-            {/* Login de conta mobile */}
-            <a href="/user">
-              <div className="flex items-center px-5">
-                  <div className="flex-shrink-0">
-                    <img
-                      alt=""
-                      src={user.imageUrl}
-                      className="h-10 w-10 rounded-full"
-                    />
-                  </div>
-                  <div className="ml-3">
-                    <div className="text-base font-medium leading-none text-gray-600 dark:text-gray-100">
-                      {user.name}
-                    </div>
-                    <div className="text-sm font-medium leading-none text-gray-400 dark:text-gray-300">
-                      {user.email}
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon aria-hidden="true" className="h-6 w-6" />
-                  </button>
-                </div>
-            </a>
           </DialogPanel>
         </div>
       </Dialog>
@@ -458,8 +478,28 @@ export default function Navbar() {
                   ))}
                 </div>
               </PopoverGroup>
-              {/* Login desktop */}
+
               <div className="ml-auto flex items-center">
+                {/* Login desktop quando deslogado*/}
+                <div className="ml-auto flex items-center">
+                  <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                    <a
+                      href="/login"
+                      className="text-sm font-medium text-gray-200 hover:text-gray-300"
+                    >
+                      Entrar
+                    </a>
+                    <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
+                    <a
+                      href="/criarconta"
+                      className="text-sm font-medium text-gray-200 hover:text-gray-300"
+                    >
+                      Crie uma conta
+                    </a>
+                  </div>
+                </div>
+
+                {/* Login desktop quando logado*/}
                 <a href="/user">
                   <div className="hidden items-center px-5 lg:flex">
                     <div className="flex-shrink-0">

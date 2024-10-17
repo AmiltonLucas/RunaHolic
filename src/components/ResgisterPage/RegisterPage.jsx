@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/logo.jpg"
+import Logo from "../../assets/logo.jpg";
 
 export default function RegisterPage() {
   return (
@@ -23,7 +23,7 @@ export default function RegisterPage() {
                 htmlFor="text"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Nome 
+                Nome
               </label>
               <div className="mt-2">
                 <input
@@ -42,7 +42,7 @@ export default function RegisterPage() {
                 htmlFor="email"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Email 
+                Email
               </label>
               <div className="mt-2">
                 <input
@@ -52,26 +52,6 @@ export default function RegisterPage() {
                   required
                   autoComplete="email"
                   placeholder="Digite seu email"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                htmlFor="cpf"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                CPF
-              </label>
-              <div className="mt-2">
-                <input
-                  id="number"
-                  name="cpf"
-                  type="number"
-                  required
-                  autoComplete="number"
-                  placeholder="Digite seu CPF (Apenas números)"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
