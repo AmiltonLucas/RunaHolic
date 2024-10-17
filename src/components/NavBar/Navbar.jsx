@@ -501,7 +501,7 @@ export default function Navbar() {
 
                 {/* Login desktop quando logado*/}
                 <a href="/user">
-                  <div className="hidden items-center px-5 lg:flex">
+                  <div className="hidden items-center px-5 sm:flex">
                     <div className="flex-shrink-0">
                       <img
                         alt=""
