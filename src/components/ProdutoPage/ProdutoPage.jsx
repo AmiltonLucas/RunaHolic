@@ -303,6 +303,14 @@ export default function ProdutoPage() {
               >
                 Adicionar ao carrinho
               </button>
+                <a href="/fechar-pedido">
+                  <button
+                    type="button"
+                    className="mt-2 flex w-full items-center justify-center rounded-md border border-transparent bg-primary dark:bg-secondary px-8 py-3 text-base font-medium text-white hover:bg-primary/70 dark:hover:bg-secondary/70  focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2"
+                  >
+                    Comprar agora
+                  </button>
+                </a>
             </form>
           </div>
 
