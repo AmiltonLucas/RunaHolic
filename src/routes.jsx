@@ -20,6 +20,7 @@ import UserAccountData from "./Components/User/UserAccountData/UserAccountData";
 import UserSecurity from "./Components/User/UserSecurity/UserSecurity";
 import UserCards from "./Components/User/UserCards/UserCards";
 import UserLocation from "./Components/User/UserLocation/UserLocation";
+import CheckoutPage from "./Pages/Checkout";
 
 function AppRoutes() {
   return (
@@ -37,6 +38,7 @@ function AppRoutes() {
           <Route path="/masculino" element={<Masculino />}></Route>
           <Route path="/feminino" element={<Feminino />}></Route>
           <Route path="/produto" element={<Produto />}></Route>
+          <Route path="/fechar-pedido" element={<CheckoutPage />}></Route>
           <Route path="/eventos" element={<Eventos />}></Route>
           <Route path="/eventos/register" element={<EventRegister />}></Route>
           <Route path="/sobrenos" element={<SobreNos />}></Route>
@@ -44,7 +46,10 @@ function AppRoutes() {
           <Route path="*" element={<Page404 />}></Route>
           {/* User config routes */}
           <Route path="/user" element={<UserPage />}></Route>
-          <Route path="/user/pessoal-data" element={<UserPessoalData />}></Route>
+          <Route
+            path="/user/pessoal-data"
+            element={<UserPessoalData />}
+          ></Route>
           <Route path="/user/conta-data" element={<UserAccountData />}></Route>
           <Route path="/user/seguranca" element={<UserSecurity />}></Route>
           <Route path="/user/cartoes" element={<UserCards />}></Route>
