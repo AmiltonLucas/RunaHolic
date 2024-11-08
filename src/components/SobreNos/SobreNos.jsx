@@ -15,17 +15,27 @@ const SobreNosContainer = () => {
 
       {/* Informações à Direita */}
       <div className="w-full md:w-1/2 md:pl-8 mt-6 md:mt-0">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Sobre Nós</h2>
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+          Sobre Nós
+        </h2>
         <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-          Bem-vindo à nossa empresa! Temos como missão proporcionar o melhor
-          atendimento e oferecer produtos da mais alta qualidade. Nossa equipe
-          trabalha incansavelmente para atender às necessidades de nossos
-          clientes, sempre buscando inovação e excelência.
+          Somos a Runaholic, uma marca feita para aqueles que, como nós, são
+          viciados em correr. Mais do que um nome, Runaholic representa o
+          espírito de quem encontra na corrida um propósito, um estilo de vida.
+          Desde 2020, estamos nas ruas, trilhas e avenidas, ao lado de cada
+          corredor que busca superação e foco a cada passo.
         </p>
         <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mt-4">
-          Nossa jornada começou em [ano], e desde então, temos crescido e
-          evoluído, tornando-nos uma referência no setor. Agradecemos por fazer
-          parte dessa história!
+          Nascemos no Nordeste, e nossa essência carrega essa energia vibrante e
+          autêntica da nossa terra. Criada por corredores para corredores, cada
+          peça é cuidadosamente produzida com o que sabemos que importa:
+          conforto, durabilidade e a performance necessária para cada
+          quilômetro.
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mt-4">
+          Na Runaholic, não vendemos apenas roupas, mas sim a nossa paixão pela
+          corrida. Venha correr conosco e descubra o que é ser um verdadeiro
+          Runaholic!
         </p>
       </div>
     </div>
