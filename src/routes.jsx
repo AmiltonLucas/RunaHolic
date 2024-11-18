@@ -10,7 +10,7 @@ import Produto from "./Pages/Produto";
 import SobreNos from "./Pages/SobreNós";
 import Eventos from "./Pages/Eventos";
 import EventRegister from "./Pages/EventosRegister";
-import Page404 from "./Pages/Page404";
+import Page404 from "./Error/Page404";
 import UserPage from "./Pages/User";
 import LojasPage from "./Pages/Lojas";
 import LoginRegister from "./Pages/LoginRegister";
