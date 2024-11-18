@@ -1,7 +1,7 @@
 //importações necessárias
 import React from "react";
 import footerLogo from "../../assets/logo.png";
-import Banner from "../../assets/website/footer-pattern.png";
+import Banner from "../../assets/website/footer-pattern1.png";
 import {
   FaFacebook,
   FaInstagram,

@@ -8,24 +8,16 @@ import Slider from "react-slick";
 const ImageList = [
   {
     id: 1,
-    img: Image1,
-    title: "Até 50% de desconto em todas as roupas masculinas",
+    img: Image3,
+    title: "Personalize suas camisas conosco.",
     description:
-      "Essa é a sua chance de renovar o guarda-roupa com estilo e economizar ao mesmo tempo.",
+      "Na Runaholic, você tem a liberdade de criar camisas que refletem o seu estilo e a sua por esportes.",
   },
   {
     id: 2,
     img: Image2,
-    title: "30% de desconto em todas as roupas femininas",
-    description:
-      "Nossa coleção traz as últimas tendências em moda feminina, com peças que valorizam o seu visual em qualquer ocasião.",
-  },
-  {
-    id: 3,
-    img: Image3,
-    title: "Compre 3 camisas e ganhe 1 short grátis! ",
-    description:
-      "Aproveite essa promoção exclusiva e renove seu guarda-roupa com muito mais estilo. Escolha suas camisas favoritas e leve um short para completar o visual sem custo adicional.",
+    title: "No Pix é mais barato!",
+    description: "10% de desconto para pagamento via Pix em todo site.",
   },
 ];
 
@@ -60,14 +52,6 @@ const Hero = ({ handleOrderPopup }) => {
                     {data.title}
                   </h1>
                   <p className="text-sm">{data.description}</p>
-                  <div>
-                    <button
-                      onClick={handleOrderPopup}
-                      className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
-                    >
-                      Compre agora
-                    </button>
-                  </div>
                 </div>
                 {/* seção de imagem da hero */}
                 <div className="order-1 sm:order-2">

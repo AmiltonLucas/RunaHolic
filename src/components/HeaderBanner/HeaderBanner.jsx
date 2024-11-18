@@ -1,52 +1,30 @@
 import React, { useState, useEffect } from "react";
 
-const images = ["/banner1.png", "/banner2.png"];
-
-function FullScreenBanner() {
+const FullScreenBanner = () => {
   const [currentImage, setCurrentImage] = useState(0);
+
+  const images = ["/banner1.png", "/banner2.png"];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 5000); // Muda a imagem a cada 5 segundos
+    }, 5000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [images]);
 
   return (
     <div
-      className="w-full bg-cover bg-center transition-all duration-700"
+      className={`md:h-[100vh] h-[35vh] flex justify-center items-center transition-all duration-700`}
       style={{
         backgroundImage: `url(${images[currentImage]})`,
         backgroundPosition: "center",
-        backgroundSize: "cover",
-        height: "100vh",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <style>
-        {`
-          @media (max-width: 1440px) {
-            div {
-              height: 80vh;
-              background-position: center center;
-            }
-          }
-          @media (max-width: 1024px) {
-            div {
-              height: 60vh;
-              background-position: center center;
-            }
-          }
-          @media (max-width: 768px) {
-            div {
-              height: 50vh;
-              background-position: center center;
-            }
-          }
-        `}
-      </style>
     </div>
   );
-}
+};
 
 export default FullScreenBanner;
