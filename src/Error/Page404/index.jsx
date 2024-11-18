@@ -15,8 +15,7 @@ export default function Page404() {
           Oops! Página não encontrada.
         </p>
         <p className="mt-2 text-gray-200">
-          Parece que a página que você está procurando não existe ou foi
-          removida.
+          Parece que a página que você está procurando não existe
         </p>
         {/* Botão com animação de escala */}
         <button
