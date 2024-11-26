@@ -1,5 +1,5 @@
 import React from "react";
-import Foto from "../../assets/women/women.png";
+import Foto from "../../assets/women/Loja2.jpeg";
 
 const SobreNosContainer = () => {
   return (

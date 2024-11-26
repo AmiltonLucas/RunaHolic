@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Foto from "../../assets/women/women.png";
+import Foto from "../../assets/women/Loja3.jpeg";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Lojas = () => {

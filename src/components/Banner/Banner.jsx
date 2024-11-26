@@ -1,6 +1,6 @@
 // Importações necessárias
 import React from "react";
-import BannerImg from "../../assets/women/women3.jpg";
+import BannerImg from "../../assets/women/Loja1.jpeg";
 import { GrSecure } from "react-icons/gr";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BiSolidOffer } from "react-icons/bi";
@@ -23,15 +23,15 @@ const Banner = () => {
           {/* seção de informações e textos */}
           <div className="flex flex-col justify-center gap-6 sm:pt-0">
             <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">
-              Promoção de inverno com até 50% de desconto
+              Outlet Runaholic
             </h1>
             <p
               data-aos="fade-up"
               className="text-sm text-gray-500 tracking-wide leading-5"
             >
-              até 50% de desconto em toda a coleção! Prepare-se para enfrentar o
-              frio com estilo, renovando seu guarda-roupa com peças quentes e
-              confortáveis
+              Encontre aqui peças com descontos imperdiveis, aproveite para
+              renovar seu guarda roupas esportivo com o estilo Runaholic. Corra
+              antes que acabem.
             </p>
             <div className="flex flex-col gap-4">
               <div data-aos="fade-up" className="flex items-center gap-4">
