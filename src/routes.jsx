@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import TopAvaliados from "./Pages/TopAvaliados";
-import Infantil from "./Pages/Infantil";
 import Masculino from "./Pages/Masculino";
 import Feminino from "./Pages/Feminino";
 import Produto from "./Pages/Produto";
@@ -35,7 +34,6 @@ function AppRoutes() {
           <Route path="/criarconta" element={<LoginRegister />}></Route>
           <Route path="/pesquisa" element={<PesquisaPage />}></Route>
           <Route path="/topavaliados" element={<TopAvaliados />}></Route>
-          <Route path="/infantil" element={<Infantil />}></Route>
           <Route path="/masculino" element={<Masculino />}></Route>
           <Route path="/feminino" element={<Feminino />}></Route>
           <Route path="/produto" element={<Produto />}></Route>

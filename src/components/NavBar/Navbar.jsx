@@ -159,16 +159,11 @@ const Menu = [
   },
   {
     id: 3,
-    name: "Espaço infantil",
-    link: "/infantil",
-  },
-  {
-    id: 4,
     name: "Espaço Masculino",
     link: "/masculino",
   },
   {
-    id: 5,
+    id: 4,
     name: "Espaço Feminino",
     link: "/feminino",
   },
