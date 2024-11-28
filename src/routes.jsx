@@ -21,6 +21,7 @@ import UserCards from "./Components/User/UserCards/UserCards";
 import UserLocation from "./Components/User/UserLocation/UserLocation";
 import CheckoutPage from "./Pages/Checkout";
 import TestPage from "./Pages/Test";
+import AcessoriosPage from "./Pages/Acessorios";
 
 function AppRoutes() {
   return (
@@ -36,6 +37,7 @@ function AppRoutes() {
           <Route path="/topavaliados" element={<TopAvaliados />}></Route>
           <Route path="/masculino" element={<Masculino />}></Route>
           <Route path="/feminino" element={<Feminino />}></Route>
+          <Route path="/acessorios" element={<AcessoriosPage />}></Route>
           <Route path="/produto" element={<Produto />}></Route>
           <Route path="/fechar-pedido" element={<CheckoutPage />}></Route>
           <Route path="/eventos" element={<Eventos />}></Route>

@@ -164,6 +164,11 @@ const Menu = [
   },
   {
     id: 4,
+    name: "Acessórios",
+    link: "/acessorios",
+  },
+  {
+    id: 4,
     name: "Espaço Feminino",
     link: "/feminino",
   },
