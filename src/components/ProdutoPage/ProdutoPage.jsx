@@ -121,29 +121,7 @@ export default function ProdutoPage() {
 
         {/* Layout das fotos e sequencia */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-          <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-            <img
-              alt={product.images[0].alt}
-              src={product.images[0].src}
-              className="h-full w-full object-cover object-center"
-            />
-          </div>
-          <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                alt={product.images[1].alt}
-                src={product.images[1].src}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                alt={product.images[2].alt}
-                src={product.images[2].src}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          </div>
+          <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8"></div>
           <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
             <img
               alt={product.images[3].alt}
@@ -303,14 +281,14 @@ export default function ProdutoPage() {
               >
                 Adicionar ao carrinho
               </button>
-                <a href="/fechar-pedido">
-                  <button
-                    type="button"
-                    className="mt-2 flex w-full items-center justify-center rounded-md border border-transparent bg-primary dark:bg-secondary px-8 py-3 text-base font-medium text-white hover:bg-primary/70 dark:hover:bg-secondary/70  focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2"
-                  >
-                    Comprar agora
-                  </button>
-                </a>
+              <a href="/fechar-pedido">
+                <button
+                  type="button"
+                  className="mt-2 flex w-full items-center justify-center rounded-md border border-transparent bg-primary dark:bg-secondary px-8 py-3 text-base font-medium text-white hover:bg-primary/70 dark:hover:bg-secondary/70  focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 focus:ring-offset-2"
+                >
+                  Comprar agora
+                </button>
+              </a>
             </form>
           </div>
 
@@ -322,39 +300,6 @@ export default function ProdutoPage() {
               <div className="space-y-6">
                 <p className="text-base text-gray-900  dark:text-gray-300">
                   {product.description}
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900  dark:text-gray-200">
-                Tecnologias
-              </h3>
-
-              <div className="mt-4">
-                <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                  {product.highlights.map((highlight) => (
-                    <li
-                      key={highlight}
-                      className="text-gray-400  dark:text-gray-400"
-                    >
-                      <span className="text-gray-600  dark:text-gray-200">
-                        {highlight}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900 dark:text-gray-200">
-                Detalhes
-              </h2>
-
-              <div className="mt-4 space-y-6">
-                <p className="text-sm text-gray-600  dark:text-gray-200">
-                  {product.details}
                 </p>
               </div>
             </div>

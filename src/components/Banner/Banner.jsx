@@ -1,6 +1,6 @@
 // Importações necessárias
 import React from "react";
-import BannerImg from "../../assets/women/Loja1.jpeg";
+import BannerImg from "../../assets/women/Banner.jpeg";
 import { GrSecure } from "react-icons/gr";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BiSolidOffer } from "react-icons/bi";

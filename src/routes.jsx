@@ -21,6 +21,7 @@ import UserSecurity from "./Components/User/UserSecurity/UserSecurity";
 import UserCards from "./Components/User/UserCards/UserCards";
 import UserLocation from "./Components/User/UserLocation/UserLocation";
 import CheckoutPage from "./Pages/Checkout";
+import TestPage from "./Pages/Test";
 
 function AppRoutes() {
   return (
@@ -43,6 +44,7 @@ function AppRoutes() {
           <Route path="/eventos/register" element={<EventRegister />}></Route>
           <Route path="/sobrenos" element={<SobreNos />}></Route>
           <Route path="/lojas" element={<LojasPage />}></Route>
+          <Route path="/testetesteteste" element={<TestPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
           {/* User config routes */}
           <Route path="/user" element={<UserPage />}></Route>
