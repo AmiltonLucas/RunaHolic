@@ -209,7 +209,7 @@ export default function Navbar() {
               <div className="flow-root">
                 <a
                   href="/login"
-                  className="-m-2 block p-2 font-medium text-gray-900"
+                  className="-m-2 block p-2 font-medium text-gray-100"
                 >
                   Entrar
                 </a>
@@ -217,7 +217,7 @@ export default function Navbar() {
               <div className="flow-root">
                 <a
                   href="/criarconta"
-                  className="-m-2 block p-2 font-medium text-gray-900"
+                  className="-m-2 block p-2 font-medium text-gray-100"
                 >
                   Crie uma conta
                 </a>
@@ -380,7 +380,7 @@ export default function Navbar() {
               </div>
 
               {/* Flyout menus */}
-              <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch z-10">
+              <PopoverGroup className="hidden md:ml-8 md:block md:self-stretch z-10">
                 <div className="flex h-full space-x-8">
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
@@ -482,7 +482,7 @@ export default function Navbar() {
               <div className="ml-auto flex items-center">
                 {/* Login desktop quando deslogado*/}
                 <div className="ml-auto flex items-center">
-                  <div className="hidden sm:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 p-2 gap-2">
+                  <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 p-2 gap-2">
                     <a
                       href="/login"
                       className="text-sm font-medium text-gray-200 hover:text-gray-300"
@@ -501,7 +501,7 @@ export default function Navbar() {
 
                 {/* Login desktop quando logado*/}
                 <a href="/user">
-                  <div className="hidden items-center px-5 sm:flex">
+                  <div className="hidden items-center px-5 lg:flex">
                     <div className="flex-shrink-0">
                       <img
                         alt=""
