@@ -42,7 +42,7 @@ const navigation = {
     { name: "Masculino", href: "/masculino" },
     { name: "Feminino", href: "/feminino" },
     { name: "Acessórios", href: "/acessorios" },
-    { name: "Eventos", ref: "/eventos" },
+    { name: "Eventos", href: "/eventos" },
     { name: "Sobre nós", href: "/sobrenos" },
     { name: "Lojas", href: "/lojas" },
   ],

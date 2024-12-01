@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const EventCard = ({ event }) => (
-  <div className="bg-white rounded-lg shadow-md p-4 dark:bg-gray-400 dark:text-gray-900">
+  <div className="bg-white rounded-lg shadow-md p-4 dark:bg-gray-600 dark:text-gray-900">
     {/* Cada event. busca as informações na const events e coloca automaticamente aqui */}
     <img
       src={event.image}
       alt={event.title}
       className="w-full h-40 object-cover rounded-t-lg"
     />
-    <h3 className="text-lg font-semibold mt-2">{event.title}</h3>
-    <p className="text-sm text-gray-600">{event.organizer}</p>
-    <p className="text-sm text-gray-600">{event.date}</p>
-    <p className="text-sm text-gray-600">{event.location}</p>
+    <h3 className="text-lg font-semibold mt-2 dark:text-gray-200">{event.title}</h3>
+    <p className="text-sm text-gray-400 dark:text-gray-300">{event.organizer}</p>
+    <p className="text-sm text-gray-400 dark:text-gray-300">{event.date}</p>
+    <p className="text-sm text-gray-400 dark:text-gray-300">{event.location}</p>
     <a href="/eventos/register">
       <button className="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/60 transition dark:bg-secondary">
         Register
@@ -76,7 +76,7 @@ const EventsPage = () => {
   return (
     <div className="container mx-auto px-4 py-8 h-[100%] dark:bg-gray-800 dark:text-white">
       <h1 className="text-3xl font-bold mb-8 text-center">Eventos</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 dark:text-gray-800">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-800">
         {currentEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}
