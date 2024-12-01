@@ -1,7 +1,7 @@
 // Importações necessárias
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,16 +19,7 @@ const Sidebar = () => {
               <Link to="/user/pessoal-data">Dados pessoais</Link>
             </li>
             <li className="p-4 hover:bg-gray-700">
-              <Link to="/user/conta-data">Dados da sua conta</Link>
-            </li>
-            <li className="p-4 hover:bg-gray-700">
-              <Link to="/user/seguranca">Segurança</Link>
-            </li>
-            <li className="p-4 hover:bg-gray-700">
-              <Link to="/user/cartoes">Cartões</Link>
-            </li>
-            <li className="p-4 hover:bg-gray-700">
-              <Link to="/user/localizacao">Endereços</Link>
+              <Link to="/user/pedidos">Pedidos</Link>
             </li>
           </ul>
         </nav>
@@ -75,23 +66,8 @@ const Sidebar = () => {
                   </Link>
                 </li>
                 <li className="p-4 hover:bg-gray-700">
-                  <Link to="/user/conta-data" onClick={toggleSidebar}>
-                    Dados da sua conta
-                  </Link>
-                </li>
-                <li className="p-4 hover:bg-gray-700">
-                  <Link to="/user/seguranca" onClick={toggleSidebar}>
-                    Segurança
-                  </Link>
-                </li>
-                <li className="p-4 hover:bg-gray-700">
-                  <Link to="/user/cartoes" onClick={toggleSidebar}>
-                    Cartões
-                  </Link>
-                </li>
-                <li className="p-4 hover:bg-gray-700">
-                  <Link to="/user/localizacao" onClick={toggleSidebar}>
-                    Endereços
+                  <Link to="/user/pedidos" onClick={toggleSidebar}>
+                    Pedidos
                   </Link>
                 </li>
               </ul>

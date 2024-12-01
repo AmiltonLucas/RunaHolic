@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaUser, FaCog, FaLock, FaSignOutAlt, FaBars, FaTimes } from 'react-icons/fa'; // Ícones
+import { FaUser, FaSignOutAlt } from 'react-icons/fa'; // Ícones
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../UserSidebar/UserSidebar';
 
 const user = {
@@ -9,22 +10,17 @@ const user = {
 };
 
 const sections = [
-  { name: "Dados pessoais", description: "Informações do seu documento de identidade e sua atividade econômica." },
-  { name: "Dados da sua conta", description: "Dados que representam a conta no Mercado Livre e Mercado Pago." },
-  { name: "Segurança", description: "Você tem configurações pendentes." },
-  { name: "Cartões", description: "Cartões salvos na sua conta." },
-  { name: "Endereços", description: "Endereços associados à sua conta." },
-];
-
-const sidebarItems = [
-  { name: "Perfil", icon: FaUser },
-  { name: "Configurações", icon: FaCog },
-  { name: "Segurança", icon: FaLock },
-  { name: "Sair", icon: FaSignOutAlt },
+  { name: "Dados pessoais", description: "Informações do seu documento de identidade e sua atividade econômica.", path: "/user/pessoal-data" },
+  { name: "Pedidos", description: "Veja o Historico dos seus pedidos", path: "/user/pedidos" },
 ];
 
 export default function UserDashboard() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
+  const navigate = useNavigate();
+
+  const handleSectionClick = (path) => {
+    navigate(path);
+  };
 
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -51,7 +47,8 @@ export default function UserDashboard() {
           {sections.map((section, index) => (
             <div
               key={index}
-              className="p-6 bg-white shadow-md rounded-md hover:bg-gray-50 transition-colors"
+              className="p-6 bg-white shadow-md rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
+              onClick={() => handleSectionClick(section.path)}
             >
               <h3 className="text-xl font-medium text-gray-800">{section.name}</h3>
               <p className="text-sm text-gray-600 mt-2">{section.description}</p>

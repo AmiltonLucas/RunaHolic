@@ -15,10 +15,7 @@ import LojasPage from "./Pages/Lojas";
 import LoginRegister from "./Pages/LoginRegister";
 import PesquisaPage from "./Pages/PesquisaPage/Index";
 import UserPessoalData from "./Components/User/UserPessoalData/UserPessoalData";
-import UserAccountData from "./Components/User/UserAccountData/UserAccountData";
-import UserSecurity from "./Components/User/UserSecurity/UserSecurity";
-import UserCards from "./Components/User/UserCards/UserCards";
-import UserLocation from "./Components/User/UserLocation/UserLocation";
+import UserPedidos from "./Components/User/UserPedidos/UserPedidos";
 import CheckoutPage from "./Pages/Checkout";
 import TestPage from "./Pages/Test";
 import AcessoriosPage from "./Pages/Acessorios";
@@ -52,10 +49,7 @@ function AppRoutes() {
             path="/user/pessoal-data"
             element={<UserPessoalData />}
           ></Route>
-          <Route path="/user/conta-data" element={<UserAccountData />}></Route>
-          <Route path="/user/seguranca" element={<UserSecurity />}></Route>
-          <Route path="/user/cartoes" element={<UserCards />}></Route>
-          <Route path="/user/localizacao" element={<UserLocation />}></Route>
+          <Route path="/user/pedidos" element={<UserPedidos />}></Route>
         </Routes>
       </BrowserRouter>
     </>
