@@ -81,16 +81,18 @@ const EventRegister = () => {
           </div>
           {/* Btn de compra de ingressos */}
           <div className="mt-4 flex items-center justify-between">
-            <button
-              className={`flex-grow py-2 rounded ${
-                isDisabled
-                  ? "bg-secondary/50 text-gray-300 cursor-not-allowed"
-                  : "bg-secondary text-white"
-              }`}
-              disabled={isDisabled}
-            >
-              {isDisabled ? "Selecione uma modalidade" : "Comprar ingresso"}
-            </button>
+            <a href="/eventos/register/finalizar">
+              <button
+                className={`flex-grow py-2 rounded ${
+                  isDisabled
+                    ? "bg-secondary/50 text-gray-300 cursor-not-allowed"
+                    : "bg-secondary text-white"
+                }`}
+                disabled={isDisabled}
+              >
+                {isDisabled ? "Selecione uma modalidade" : "Comprar ingresso"}
+              </button>
+            </a>
             {!isDisabled && (
               <span className="ml-2 font-semibold">
                 R$ {totalPrice.toFixed(2)}

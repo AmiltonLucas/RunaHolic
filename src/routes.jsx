@@ -19,6 +19,9 @@ import UserPedidos from "./Components/User/UserPedidos/UserPedidos";
 import CheckoutPage from "./Pages/Checkout";
 import TestPage from "./Pages/Test";
 import AcessoriosPage from "./Pages/Acessorios";
+import EventUserRegister from "./Pages/EventosUserRegister";
+import RecuperarSenhaPage from "./Pages/RecuperarSenha";
+import RedefinirSenhaPage from "./Pages/RedefinirSenha";
 
 function AppRoutes() {
   return (
@@ -29,6 +32,8 @@ function AppRoutes() {
           {/* Users routes */}
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/login/recuperar-senha" element={<RecuperarSenhaPage />}></Route>
+          <Route path="/login/redefinir-senha" element={<RedefinirSenhaPage />}></Route>
           <Route path="/criarconta" element={<LoginRegister />}></Route>
           <Route path="/pesquisa" element={<PesquisaPage />}></Route>
           <Route path="/topavaliados" element={<TopAvaliados />}></Route>
@@ -39,6 +44,7 @@ function AppRoutes() {
           <Route path="/fechar-pedido" element={<CheckoutPage />}></Route>
           <Route path="/eventos" element={<Eventos />}></Route>
           <Route path="/eventos/register" element={<EventRegister />}></Route>
+          <Route path="/eventos/register/finalizar" element={<EventUserRegister />}></Route>
           <Route path="/sobrenos" element={<SobreNos />}></Route>
           <Route path="/lojas" element={<LojasPage />}></Route>
           <Route path="/testetesteteste" element={<TestPage />}></Route>
