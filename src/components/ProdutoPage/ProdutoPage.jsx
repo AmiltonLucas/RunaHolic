@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 // Const com informações do produtos
 const product = {
@@ -76,6 +77,13 @@ function classNames(...classes) {
 export default function ProdutoPage() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+  const [corrida, setCorrida] = useState(0);
+  const [caominhada, setCaominhada] = useState(0);
+
+  const precoCorrida = 99.0;
+  const precoCaominhada = 99.0;
+
+  const total = corrida * precoCorrida + caominhada * precoCaominhada;
 
   return (
     <div className="bg-white dark:bg-gray-800">
@@ -182,6 +190,7 @@ export default function ProdutoPage() {
                     {reviews.totalCount} reviews
                   </a>
                 </div>
+                
               </div>
               <form className="mt-10">
                 {/* Cores disponiveis */}
@@ -279,6 +288,33 @@ export default function ProdutoPage() {
                       ))}
                     </RadioGroup>
                   </fieldset>
+                  <div className="flex justify-between items-center mb-4 text-gray-800 dark:text-gray-200">
+                    <div>
+                      <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200">Quantidade</h2>
+                      <p>R$ {precoCorrida.toFixed(2)}</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        className="bg-primary dark:bg-secondary text-gray-200 px-2 py-1 rounded"
+                        onClick={() => setCorrida(Math.max(corrida - 1, 0))}
+                      >
+                        <ChevronDown />
+                      </button>
+                      <span>{corrida}</span>
+                      <button
+                        className="bg-primary dark:bg-secondary text-gray-200  px-2 py-1 rounded"
+                        onClick={() => setCorrida(corrida + 1)}
+                      >
+                        <ChevronUp />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-4 rounded-md w-80">
+                 
+                  <div className="flex justify-between items-center mt-4">
+                    <p className="text-lg font-bold">R$ {total.toFixed(2)}</p>
+                  </div>
+                </div>
                 </div>
                 {/* Adicionanr ao carrinho */}
                 <button

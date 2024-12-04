@@ -102,9 +102,11 @@ const EventRegister = () => {
           <button className="w-full bg-primary text-white py-2 rounded mt-2">
             Já me inscrevi
           </button>
-          <button className="w-full bg-primary text-white py-2 rounded mt-2">
-            Regulamento
-          </button>
+          <a href="/eventos/regulamento">
+            <button className="w-full bg-primary text-white py-2 rounded mt-2">
+              Regulamento
+            </button>
+          </a>
         </div>
             {/* informações do evento */}
         <div className="md:w-2/3 p-2 rounded-lg dark:bg-gray-700">

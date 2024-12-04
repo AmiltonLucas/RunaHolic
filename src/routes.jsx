@@ -22,6 +22,7 @@ import AcessoriosPage from "./Pages/Acessorios";
 import EventUserRegister from "./Pages/EventosUserRegister";
 import RecuperarSenhaPage from "./Pages/RecuperarSenha";
 import RedefinirSenhaPage from "./Pages/RedefinirSenha";
+import EventsRegulamentoPage from "./Pages/EventosRegulamento";
 
 function AppRoutes() {
   return (
@@ -44,6 +45,7 @@ function AppRoutes() {
           <Route path="/fechar-pedido" element={<CheckoutPage />}></Route>
           <Route path="/eventos" element={<Eventos />}></Route>
           <Route path="/eventos/register" element={<EventRegister />}></Route>
+          <Route path="/eventos/regulamento" element={<EventsRegulamentoPage />}></Route>
           <Route path="/eventos/register/finalizar" element={<EventUserRegister />}></Route>
           <Route path="/sobrenos" element={<SobreNos />}></Route>
           <Route path="/lojas" element={<LojasPage />}></Route>
