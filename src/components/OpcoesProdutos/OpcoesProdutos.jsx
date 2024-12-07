@@ -11,7 +11,6 @@ const OpcoesProdutos = () => {
       >
         {/* Grid para filtros e produtos */}
         <div className="grid grid-cols-1 md:grid-cols-4">
-
           {/* Produtos */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:col-span-4 lg:grid-cols-4">
             {/* Card de Produto */}
@@ -24,8 +23,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">Tênis de Corrida</h3>
               <p className="text-gray-600 dark:text-white">R$320</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>
@@ -39,8 +38,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>
@@ -54,8 +53,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>
@@ -69,8 +68,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>
@@ -84,8 +83,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>
@@ -99,8 +98,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>
@@ -114,8 +113,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>
@@ -129,8 +128,8 @@ const OpcoesProdutos = () => {
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
               <a href="/produto">
-                <button className="bg-primary hover:bg-primary/80 mt-4 w-full rounded-md py-2 text-white">
-                  Comprar
+                <button className="bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 mt-4 w-full rounded-md py-2 text-white">
+                  Saiba Mais
                 </button>
               </a>
             </div>

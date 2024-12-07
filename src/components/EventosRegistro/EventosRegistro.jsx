@@ -3,16 +3,27 @@
 // importações necessárias
 import React, { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Modal from "../modal/Modal";
 
 const EventRegister = () => {
   // contagem de números
   const [runningCount, setRunningCount] = useState(0);
   const [walkingCount, setWalkingCount] = useState(0);
+  const [dis5kmCount, setDis5kmCount] = useState(0);
+  const [dis10kmCount, setDis10kmCount] = useState(0);
+  const [dis21kmCount, setDis21kmCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    setTotalPrice((runningCount + walkingCount) * 99);
-  }, [runningCount, walkingCount]);
+    setTotalPrice(
+      (runningCount +
+        walkingCount +
+        dis5kmCount +
+        dis10kmCount +
+        dis21kmCount) *
+        99
+    );
+  }, [runningCount, walkingCount, dis5kmCount, dis10kmCount, dis21kmCount]);
 
   const isDisabled = runningCount === 0 && walkingCount === 0;
 
@@ -22,6 +33,7 @@ const EventRegister = () => {
       <header className="bg-primary dark:bg-secondary text-white text-center py-4 mb-6">
         <h1 className="text-3xl font-bold">1ª CORRIDA PROANIMAL</h1>
       </header>
+
       {/* Busca a imagem do evento */}
       <div className="flex flex-col md:flex-row gap-6 dark:bg-gray-700 rounded-lg">
         <div className="md:w-1/3">
@@ -30,11 +42,13 @@ const EventRegister = () => {
             alt="1ª Corrida ProAnimal 5K"
             className="w-full rounded-lg shadow-md"
           />
+
           {/* Data do evento */}
           <div className="mt-4">
             <h2 className="font-semibold">Data do evento</h2>
             <p>06 de outubro de 2024</p>
           </div>
+
           {/* opção de compra com contador */}
           <div className="mt-4">
             <h2 className="font-semibold mb-2">CORRIDA</h2>
@@ -57,6 +71,7 @@ const EventRegister = () => {
               </div>
             </div>
           </div>
+
           {/* opção de categoria com contador */}
           <div className="mt-4">
             <h2 className="font-semibold mb-2">CÃOMINHADA</h2>
@@ -79,6 +94,76 @@ const EventRegister = () => {
               </div>
             </div>
           </div>
+
+          {/* opção de categoria com contador */}
+          <div className="mt-4">
+            <h2 className="font-semibold mb-2">DISTÂNCIA 5km</h2>
+            <div className="flex items-center justify-between">
+              <span>R$ 40,00</span>
+              <div className="flex items-center">
+                <button
+                  onClick={() => setDis5kmCount(Math.max(0, dis5kmCount - 1))}
+                  className="bg-primary/20 rounded-full p-1"
+                >
+                  <ChevronDown size={24} />
+                </button>
+                <span className="mx-2">{dis5kmCount}</span>
+                <button
+                  onClick={() => setDis5kmCount(dis5kmCount + 1)}
+                  className="bg-primary rounded-full p-1 text-white"
+                >
+                  <ChevronUp size={24} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* opção de categoria com contador */}
+          <div className="mt-4">
+            <h2 className="font-semibold mb-2">DISTÂNCIA 10km</h2>
+            <div className="flex items-center justify-between">
+              <span>R$ 50,00</span>
+              <div className="flex items-center">
+                <button
+                  onClick={() => setDis10kmCount(Math.max(0, dis10kmCount - 1))}
+                  className="bg-primary/20 rounded-full p-1"
+                >
+                  <ChevronDown size={24} />
+                </button>
+                <span className="mx-2">{dis10kmCount}</span>
+                <button
+                  onClick={() => setDis10kmCount(dis10kmCount + 1)}
+                  className="bg-primary rounded-full p-1 text-white"
+                >
+                  <ChevronUp size={24} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* opção de categoria com contador */}
+          <div className="mt-4">
+            <h2 className="font-semibold mb-2">DISTÂNCIA 21km</h2>
+            <div className="flex items-center justify-between">
+              <span>R$ 60,00</span>
+              <div className="flex items-center">
+                <button
+                  onClick={() => setDis21kmCount(Math.max(0, dis21kmCount - 1))}
+                  className="bg-primary/20 rounded-full p-1"
+                >
+                  <ChevronDown size={24} />
+                </button>
+                <span className="mx-2">{dis21kmCount}</span>
+                <button
+                  onClick={() => setDis21kmCount(dis21kmCount + 1)}
+                  className="bg-primary rounded-full p-1 text-white"
+                >
+                  <ChevronUp size={24} />
+                </button>
+              </div>
+            </div>
+          </div>
+
           {/* Btn de compra de ingressos */}
           <div className="mt-4 flex items-center justify-between">
             <a href="/eventos/register/finalizar">
@@ -99,16 +184,16 @@ const EventRegister = () => {
               </span>
             )}
           </div>
-          <button className="w-full bg-primary text-white py-2 rounded mt-2">
-            Já me inscrevi
-          </button>
-          <a href="/eventos/regulamento">
-            <button className="w-full bg-primary text-white py-2 rounded mt-2">
-              Regulamento
-            </button>
-          </a>
+          <div className="flex justify-between">
+            <Modal />
+            <a href="/eventos/regulamento">
+              <button className="w-[8rem] bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 text-white py-2 rounded mt-2">
+                Regulamento
+              </button>
+            </a>
+          </div>
         </div>
-            {/* informações do evento */}
+        {/* informações do evento */}
         <div className="md:w-2/3 p-2 rounded-lg dark:bg-gray-700">
           <h2 className="text-2xl font-bold mb-4">1ª CORRIDA PROANIMAL 5K</h2>
           <p className="mb-4">

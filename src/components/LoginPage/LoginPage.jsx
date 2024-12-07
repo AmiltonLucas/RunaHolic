@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../assets/logo.jpg"
+import Google from "../../assets/google.png"
 
 export default function LoginPage() {
   return (
@@ -73,6 +74,14 @@ export default function LoginPage() {
               >
                 Entrar
               </button>
+            </div>
+            <div>
+              <a
+                className="flex w-full justify-center rounded-md bg-white text-gray-900 border-2 border-gray-900 px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 gap-4 cursor-pointer"
+              >
+              <img src={Google} className="w-[24px]"/>
+                Entre com Google
+              </a>
             </div>
           </form>
 

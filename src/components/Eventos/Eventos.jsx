@@ -16,7 +16,7 @@ const EventCard = ({ event }) => (
     <p className="text-sm text-gray-400 dark:text-gray-300">{event.location}</p>
     <a href="/eventos/register">
       <button className="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary/60 transition dark:bg-secondary">
-        Register
+        Saiba mais
       </button>
     </a>
   </div>
