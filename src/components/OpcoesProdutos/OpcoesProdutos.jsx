@@ -18,7 +18,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 1"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">Tênis de Corrida</h3>
               <p className="text-gray-600 dark:text-white">R$320</p>
@@ -33,7 +33,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 2"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
@@ -48,7 +48,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 3"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
@@ -63,7 +63,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 4"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
@@ -78,7 +78,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 5"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
@@ -93,7 +93,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 6"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
@@ -108,7 +108,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 7"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>
@@ -123,7 +123,7 @@ const OpcoesProdutos = () => {
               <img
                 src="https://via.placeholder.com/200"
                 alt="Produto 8"
-                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover lg:w-full lg:h-48"
+                className="mb-4 m-auto h-48 w-[50%] rounded-md object-cover"
               />
               <h3 className="text-lg font-semibold">NaN</h3>
               <p className="text-gray-600 dark:text-white">R$NaN</p>

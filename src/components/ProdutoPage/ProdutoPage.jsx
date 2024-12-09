@@ -160,6 +160,7 @@
                 <p className="text-3xl tracking-tight text-gray-900 dark:text-gray-200">
                   {product.price}
                 </p>
+                
                 {/* Avaliações */}
                 <div className="mt-6">
                   <h3 className="sr-only">Reviews</h3>
