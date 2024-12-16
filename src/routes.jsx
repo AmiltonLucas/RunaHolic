@@ -23,6 +23,9 @@ import EventUserRegister from "./Pages/EventosUserRegister";
 import RecuperarSenhaPage from "./Pages/RecuperarSenha";
 import RedefinirSenhaPage from "./Pages/RedefinirSenha";
 import EventsRegulamentoPage from "./Pages/EventosRegulamento";
+import EscolhadeEntrega from "./Components/Enderecos/EscolhadeEntrega";
+import GerenciarEnderecos from "./Components/Enderecos/GerenciarEnderecos";
+import AdicionarEndereco from "./Components/Enderecos/AdicionarEndereco";
 
 function AppRoutes() {
   return (
@@ -51,6 +54,9 @@ function AppRoutes() {
           <Route path="/lojas" element={<LojasPage />}></Route>
           <Route path="/testetesteteste" element={<TestPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
+          <Route path="/E" element={<EscolhadeEntrega />}></Route>
+          <Route path="/E1" element={<GerenciarEnderecos />}></Route>
+          <Route path="/E2" element={<AdicionarEndereco />}></Route>
           {/* User config routes */}
           <Route path="/user" element={<UserPage />}></Route>
           <Route
