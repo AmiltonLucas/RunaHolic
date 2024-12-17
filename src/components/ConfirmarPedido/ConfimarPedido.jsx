@@ -1,9 +1,7 @@
 import React from "react";
 import { userInformations, deliveryInfo } from "../../Data/Data.js";
-import Navbar from "../../Components/NavBar/Navbar.jsx";
-import Footer from "../../Components/Footer/Footer.jsx";
 
-const TestPage = () => {
+const ConfirmarPedido = () => {
   // Constante do produto
   const produto = {
     nome: "Shorts Duplo",
@@ -16,8 +14,7 @@ const TestPage = () => {
   const precoFinal = (produto.preco * produto.quantidade).toFixed(2);
 
   return (
-    <div>
-      <Navbar />
+    <>
       <div className="flex justify-center min-h-screen py-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <div className="bg-white dark:bg-gray-800 max-w-4xl w-full mx-auto p-6 shadow-lg rounded-lg">
           {/* Título */}
@@ -109,9 +106,8 @@ const TestPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
-export default TestPage;
+export default ConfirmarPedido;

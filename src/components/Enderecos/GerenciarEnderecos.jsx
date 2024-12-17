@@ -1,12 +1,13 @@
 import React from "react";
-import { userInformations }  from "../../Data/Data.js";
+import { userInformations } from "../../Data/Data.js";
 import Footer from "../Footer/Footer.jsx";
 import Navbar from "../NavBar/Navbar.jsx";
 
 const GerenciarEnderecos = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
+      <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <div className="p-4 max-w-md mx-auto">
           <h1 className="text-xl font-bold mb-4">Meus endereços</h1>
           <div className="border rounded-lg shadow p-4 mb-4">
@@ -15,33 +16,38 @@ const GerenciarEnderecos = () => {
                 type="radio"
                 name="address"
                 defaultChecked
-                className="mt-1 mr-2 accent-blue-600"
+                className="mt-1 mr-2 accent-primary dark:accent-secondary"
               />
               <div>
                 <p className="font-semibold">{userInformations.street}</p>
-                <p className="text-gray-500">
-                  CEP {userInformations.zipCode} - {userInformations.neighborhood} -{" "}
-                  {userInformations.city}, {userInformations.state}
+                <p>
+                  CEP {userInformations.zipCode} -{" "}
+                  {userInformations.neighborhood} - {userInformations.city},{" "}
+                  {userInformations.state}
                 </p>
-                <p className="text-gray-500">
+                <p>
                   {userInformations.name} - {userInformations.phone}
                 </p>
-                <a href="/E2" className="text-blue-600 text-sm block mt-2">
+                <a
+                  href="/E2"
+                  className="text-primary dark:text-secondary text-sm block mt-2"
+                >
                   Editar
                 </a>
               </div>
             </label>
           </div>
           <div className="border-dashed border-2 rounded-lg p-4 text-center">
-            <a href="/E2" className="text-blue-600">
+            <a href="/E2" className="text-primary dark:text-secondary">
               + Adicionar endereço
             </a>
           </div>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded mt-6 w-full">
+          <button className="bg-primary dark:bg-secondary text-white px-4 py-2 rounded mt-6 w-full">
             Continuar
           </button>
         </div>
-        <Footer />
+      </div>
+      <Footer />
     </>
   );
 };

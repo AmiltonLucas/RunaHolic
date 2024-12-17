@@ -114,19 +114,19 @@ function EventRegister() {
                 // Botão Selecionar
                 <button
                   onClick={() => toggleCategory(category.key)}
-                  className="bg-primary text-white px-4 py-2 rounded-md w-[15rem]"
+                  className="bg-primary dark:bg-secondary text-white px-4 py-2 rounded-md w-[15rem]"
                 >
                   {category.name}
                 </button>
               ) : (
                 // Exibição do botão de cancelar
                 <div className="flex items-center">
-                  <span className="text-primary font-semibold mr-2 w-[12rem]">
+                  <span className="text-primary dark:text-secondary font-semibold mr-2 w-[12rem]">
                     {category.name} Selecionado
                   </span>
                   <button
                     onClick={() => toggleCategory(category.key)}
-                    className="bg-red-500 text-white p-2 rounded-full"
+                    className="bg-red-700 text-white p-2 rounded-full"
                   >
                     <XIcon size={20} />
                   </button>
@@ -140,8 +140,8 @@ function EventRegister() {
             <button
               className={`flex-grow py-2 rounded ${
                 isDisabled
-                  ? "bg-secondary/50 text-gray-300 cursor-not-allowed"
-                  : "bg-secondary text-white"
+                  ? "bg-primary/50 dark:bg-secondary/50 text-gray-300 cursor-not-allowed"
+                  : "bg-primary dark:bg-secondary text-white"
               }`}
               disabled={isDisabled}
               onClick={handleButtonClick}

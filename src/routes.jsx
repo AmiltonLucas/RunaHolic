@@ -16,16 +16,15 @@ import LoginRegister from "./Pages/LoginRegister";
 import PesquisaPage from "./Pages/PesquisaPage/Index";
 import UserPessoalData from "./Components/User/UserPessoalData/UserPessoalData";
 import UserPedidos from "./Components/User/UserPedidos/UserPedidos";
-import CheckoutPage from "./Pages/Checkout";
 import TestPage from "./Pages/Test";
 import AcessoriosPage from "./Pages/Acessorios";
 import EventUserRegister from "./Pages/EventosUserRegister";
 import RecuperarSenhaPage from "./Pages/RecuperarSenha";
 import RedefinirSenhaPage from "./Pages/RedefinirSenha";
 import EventsRegulamentoPage from "./Pages/EventosRegulamento";
-import EscolhadeEntrega from "./Components/Enderecos/EscolhadeEntrega";
 import GerenciarEnderecos from "./Components/Enderecos/GerenciarEnderecos";
 import AdicionarEndereco from "./Components/Enderecos/AdicionarEndereco";
+import ConfirmarPedidoPage from "./Pages/ConfirmarPedido/Index";
 
 function AppRoutes() {
   return (
@@ -45,7 +44,7 @@ function AppRoutes() {
           <Route path="/feminino" element={<Feminino />}></Route>
           <Route path="/acessorios" element={<AcessoriosPage />}></Route>
           <Route path="/produto" element={<Produto />}></Route>
-          <Route path="/fechar-pedido" element={<CheckoutPage />}></Route>
+          <Route path="/revisar-pedido" element={<ConfirmarPedidoPage />}></Route>
           <Route path="/eventos" element={<Eventos />}></Route>
           <Route path="/eventos/register" element={<EventRegister />}></Route>
           <Route path="/eventos/regulamento" element={<EventsRegulamentoPage />}></Route>
@@ -54,7 +53,6 @@ function AppRoutes() {
           <Route path="/lojas" element={<LojasPage />}></Route>
           <Route path="/testetesteteste" element={<TestPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
-          <Route path="/E" element={<EscolhadeEntrega />}></Route>
           <Route path="/E1" element={<GerenciarEnderecos />}></Route>
           <Route path="/E2" element={<AdicionarEndereco />}></Route>
           {/* User config routes */}
