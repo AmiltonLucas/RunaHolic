@@ -2,19 +2,14 @@
 
 // importações necessárias
 import React, { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
-import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
-import { MdGroup } from "react-icons/md";
+import { XIcon } from "lucide-react";
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { IoMdPerson } from "react-icons/io";
+import { MdGroup } from "react-icons/md";
 
-const EventRegister = () => {
-  // contagem de números
+function EventRegister() {
+  // Estados para cada categoria
   const [runningCount, setRunningCount] = useState(0);
   const [walkingCount, setWalkingCount] = useState(0);
   const [dis5kmCount, setDis5kmCount] = useState(0);
@@ -22,21 +17,61 @@ const EventRegister = () => {
   const [dis21kmCount, setDis21kmCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
+  // Estados de seleção para cada botão
+  const [selectedCategories, setSelectedCategories] = useState({
+    running: false,
+    walking: false,
+    dis5km: false,
+    dis10km: false,
+    dis21km: false,
+  });
+
+  // Botão de controle adicional
+  const [isDisabled, setDisabled] = useState(true);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  // Atualiza o preço total sempre que os contadores mudarem
   useEffect(() => {
-    setTotalPrice(
+    const total =
       (runningCount +
         walkingCount +
         dis5kmCount +
         dis10kmCount +
         dis21kmCount) *
-        99
-    );
+      99;
+    setTotalPrice(total);
+
+    // Atualiza o botão de compra com base no total
+    setDisabled(total === 0);
   }, [runningCount, walkingCount, dis5kmCount, dis10kmCount, dis21kmCount]);
 
-  const isDisabledN = runningCount === 0 && walkingCount === 0;
-
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [isDisabled, setDisabled] = useState(false); // Substitua pela sua lógica atual
+  // Função para lidar com seleção/cancelamento
+  const toggleCategory = (category) => {
+    setSelectedCategories((prev) => {
+      const newSelected = !prev[category];
+      if (newSelected) {
+        // Incrementa o contador
+        if (category === "running") setRunningCount((prev) => prev + 1);
+        if (category === "walking") setWalkingCount((prev) => prev + 1);
+        if (category === "dis5km") setDis5kmCount((prev) => prev + 1);
+        if (category === "dis10km") setDis10kmCount((prev) => prev + 1);
+        if (category === "dis21km") setDis21kmCount((prev) => prev + 1);
+      } else {
+        // Decrementa o contador (evita valores negativos)
+        if (category === "running")
+          setRunningCount((prev) => Math.max(prev - 1, 0));
+        if (category === "walking")
+          setWalkingCount((prev) => Math.max(prev - 1, 0));
+        if (category === "dis5km")
+          setDis5kmCount((prev) => Math.max(prev - 1, 0));
+        if (category === "dis10km")
+          setDis10kmCount((prev) => Math.max(prev - 1, 0));
+        if (category === "dis21km")
+          setDis21kmCount((prev) => Math.max(prev - 1, 0));
+      }
+      return { ...prev, [category]: newSelected };
+    });
+  };
 
   const handleButtonClick = () => {
     if (!isDisabled) {
@@ -47,6 +82,7 @@ const EventRegister = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
+
   return (
     <div className="max-w-4xl mx-auto p-4 font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Banner de cima */}
@@ -54,7 +90,6 @@ const EventRegister = () => {
         <h1 className="text-3xl font-bold">1ª CORRIDA PROANIMAL</h1>
       </header>
 
-      {/* Busca a imagem do evento */}
       <div className="flex flex-col md:flex-row gap-6 dark:bg-gray-700 rounded-lg">
         <div className="md:w-1/3 pl-2">
           <img
@@ -62,129 +97,45 @@ const EventRegister = () => {
             alt="1ª Corrida ProAnimal 5K"
             className="w-full rounded-lg shadow-md"
           />
-
-          {/* Data do evento */}
           <div className="mt-4">
             <h2 className="font-semibold">Data do evento</h2>
             <p>06 de outubro de 2024</p>
           </div>
-
-          {/* opção de compra com contador */}
-          <div className="mt-4">
-            <h2 className="font-semibold mb-2">CORRIDA</h2>
-            <div className="flex items-center justify-between">
-              <span>R$ 99,00</span>
-              <div className="flex items-center">
+          {/* Botão para cada categoria */}
+          {[
+            { name: "Corrida", key: "running", count: runningCount },
+            { name: "Caminhada", key: "walking", count: walkingCount },
+            { name: "5km", key: "dis5km", count: dis5kmCount },
+            { name: "10km", key: "dis10km", count: dis10kmCount },
+            { name: "21km", key: "dis21km", count: dis21kmCount },
+          ].map((category) => (
+            <div key={category.key} className="flex items-center gap-2 mb-2 mt-2">
+              {!selectedCategories[category.key] ? (
+                // Botão Selecionar
                 <button
-                  onClick={() => setRunningCount(Math.max(0, runningCount - 1))}
-                  className="bg-primary/20 rounded-full p-1"
+                  onClick={() => toggleCategory(category.key)}
+                  className="bg-primary text-white px-4 py-2 rounded-md w-[15rem]"
                 >
-                  <ChevronDown size={24} />
+                  {category.name}
                 </button>
-                <span className="mx-2">{runningCount}</span>
-                <button
-                  onClick={() => setRunningCount(runningCount + 1)}
-                  className="bg-primary rounded-full p-1 text-white"
-                >
-                  <ChevronUp size={24} />
-                </button>
-              </div>
+              ) : (
+                // Exibição do botão de cancelar
+                <div className="flex items-center">
+                  <span className="text-primary font-semibold mr-2 w-[12rem]">
+                    {category.name} Selecionado
+                  </span>
+                  <button
+                    onClick={() => toggleCategory(category.key)}
+                    className="bg-red-500 text-white p-2 rounded-full"
+                  >
+                    <XIcon size={20} />
+                  </button>
+                </div>
+              )}
+              <span className="ml-4"> {category.count}</span>
             </div>
-          </div>
-
-          {/* opção de categoria com contador */}
-          <div className="mt-4">
-            <h2 className="font-semibold mb-2">CÃOMINHADA</h2>
-            <div className="flex items-center justify-between">
-              <span>R$ 99,00</span>
-              <div className="flex items-center">
-                <button
-                  onClick={() => setWalkingCount(Math.max(0, walkingCount - 1))}
-                  className="bg-primary/20 rounded-full p-1"
-                >
-                  <ChevronDown size={24} />
-                </button>
-                <span className="mx-2">{walkingCount}</span>
-                <button
-                  onClick={() => setWalkingCount(walkingCount + 1)}
-                  className="bg-primary rounded-full p-1 text-white"
-                >
-                  <ChevronUp size={24} />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* opção de categoria com contador */}
-          <div className="mt-4">
-            <h2 className="font-semibold mb-2">DISTÂNCIA 5km</h2>
-            <div className="flex items-center justify-between">
-              <span>R$ 40,00</span>
-              <div className="flex items-center">
-                <button
-                  onClick={() => setDis5kmCount(Math.max(0, dis5kmCount - 1))}
-                  className="bg-primary/20 rounded-full p-1"
-                >
-                  <ChevronDown size={24} />
-                </button>
-                <span className="mx-2">{dis5kmCount}</span>
-                <button
-                  onClick={() => setDis5kmCount(dis5kmCount + 1)}
-                  className="bg-primary rounded-full p-1 text-white"
-                >
-                  <ChevronUp size={24} />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* opção de categoria com contador */}
-          <div className="mt-4">
-            <h2 className="font-semibold mb-2">DISTÂNCIA 10km</h2>
-            <div className="flex items-center justify-between">
-              <span>R$ 50,00</span>
-              <div className="flex items-center">
-                <button
-                  onClick={() => setDis10kmCount(Math.max(0, dis10kmCount - 1))}
-                  className="bg-primary/20 rounded-full p-1"
-                >
-                  <ChevronDown size={24} />
-                </button>
-                <span className="mx-2">{dis10kmCount}</span>
-                <button
-                  onClick={() => setDis10kmCount(dis10kmCount + 1)}
-                  className="bg-primary rounded-full p-1 text-white"
-                >
-                  <ChevronUp size={24} />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* opção de categoria com contador */}
-          <div className="mt-4">
-            <h2 className="font-semibold mb-2">DISTÂNCIA 21km</h2>
-            <div className="flex items-center justify-between">
-              <span>R$ 60,00</span>
-              <div className="flex items-center">
-                <button
-                  onClick={() => setDis21kmCount(Math.max(0, dis21kmCount - 1))}
-                  className="bg-primary/20 rounded-full p-1"
-                >
-                  <ChevronDown size={24} />
-                </button>
-                <span className="mx-2">{dis21kmCount}</span>
-                <button
-                  onClick={() => setDis21kmCount(dis21kmCount + 1)}
-                  className="bg-primary rounded-full p-1 text-white"
-                >
-                  <ChevronUp size={24} />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Btn de compra de ingressos */}
+          ))}
+          {/* Exibição do preço total */}
           <div className="mt-4 flex items-center justify-between">
             <button
               className={`flex-grow py-2 rounded ${
@@ -205,6 +156,7 @@ const EventRegister = () => {
 
             {isModalOpen && <Modal isOpen={isModalOpen} onClose={closeModal} />}
           </div>
+
           <div className="flex justify-between">
             <a href="/eventos/regulamento">
               <button className="w-[17rem] bg-primary hover:bg-primary/80 dark:bg-secondary dark:hover:bg-secondary/80 text-white py-2 rounded mt-2">
@@ -213,7 +165,7 @@ const EventRegister = () => {
             </a>
           </div>
         </div>
-        {/* informações do evento */}
+
         <div className="md:w-2/3 p-2 rounded-lg dark:bg-gray-700">
           <h2 className="text-2xl font-bold mb-4">1ª CORRIDA PROANIMAL 5K</h2>
           <p className="mb-4">
@@ -256,7 +208,7 @@ const EventRegister = () => {
       </div>
     </div>
   );
-};
+}
 
 function Modal({ isOpen, onClose }) {
   return (
