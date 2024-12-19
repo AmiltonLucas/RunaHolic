@@ -102,39 +102,77 @@ function EventRegister() {
             <p>06 de outubro de 2024</p>
           </div>
           {/* Botão para cada categoria */}
-          {[
-            { name: "Corrida", key: "running", count: runningCount },
-            { name: "Caminhada", key: "walking", count: walkingCount },
-            { name: "5km", key: "dis5km", count: dis5kmCount },
-            { name: "10km", key: "dis10km", count: dis10kmCount },
-            { name: "21km", key: "dis21km", count: dis21kmCount },
-          ].map((category) => (
-            <div key={category.key} className="flex items-center gap-2 mb-2 mt-2">
-              {!selectedCategories[category.key] ? (
-                // Botão Selecionar
-                <button
-                  onClick={() => toggleCategory(category.key)}
-                  className="bg-primary dark:bg-secondary text-white px-4 py-2 rounded-md w-[15rem]"
-                >
-                  {category.name}
-                </button>
-              ) : (
-                // Exibição do botão de cancelar
-                <div className="flex items-center">
-                  <span className="text-primary dark:text-secondary font-semibold mr-2 w-[12rem]">
-                    {category.name} Selecionado
-                  </span>
+          <div>
+            <h1>Dia 27</h1>
+            {[
+              { name: "Corrida", key: "running", count: runningCount },
+              { name: "Caminhada", key: "walking", count: walkingCount },
+              { name: "5km", key: "dis5km", count: dis5kmCount },
+              { name: "10km", key: "dis10km", count: dis10kmCount },
+              { name: "21km", key: "dis21km", count: dis21kmCount },
+            ].map((category) => (
+              <div key={category.key} className="flex items-center gap-2 mb-2 mt-2">
+                {!selectedCategories[category.key] ? (
+                  // Botão Selecionar
                   <button
                     onClick={() => toggleCategory(category.key)}
-                    className="bg-red-700 text-white p-2 rounded-full"
+                    className="bg-primary dark:bg-secondary text-white px-4 py-2 rounded-md w-[15rem]"
                   >
-                    <XIcon size={20} />
+                    {category.name}
                   </button>
+                ) : (
+                  // Exibição do botão de cancelar
+                  <div className="flex items-center">
+                    <span className="text-primary dark:text-secondary font-semibold mr-2 w-[12rem]">
+                      {category.name} Selecionado
+                    </span>
+                    <button
+                      onClick={() => toggleCategory(category.key)}
+                      className="bg-red-700 text-white p-2 rounded-full"
+                    >
+                      <XIcon size={20} />
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+
+          </div>
+            <div>
+              <h1>Dia 28</h1>
+              {[
+                { name: "Corrida", key: "running", count: runningCount },
+                { name: "Caminhada", key: "walking", count: walkingCount },
+                { name: "5km", key: "dis5km", count: dis5kmCount },
+                { name: "10km", key: "dis10km", count: dis10kmCount },
+                { name: "21km", key: "dis21km", count: dis21kmCount },
+              ].map((category) => (
+                <div key={category.key} className="flex items-center gap-2 mb-2 mt-2">
+                  {!selectedCategories[category.key] ? (
+                    // Botão Selecionar
+                    <button
+                      onClick={() => toggleCategory(category.key)}
+                      className="bg-primary dark:bg-secondary text-white px-4 py-2 rounded-md w-[15rem]"
+                    >
+                      {category.name}
+                    </button>
+                  ) : (
+                    // Exibição do botão de cancelar
+                    <div className="flex items-center">
+                      <span className="text-primary dark:text-secondary font-semibold mr-2 w-[12rem]">
+                        {category.name} Selecionado
+                      </span>
+                      <button
+                        onClick={() => toggleCategory(category.key)}
+                        className="bg-red-700 text-white p-2 rounded-full"
+                      >
+                        <XIcon size={20} />
+                      </button>
+                    </div>
+                  )}
                 </div>
-              )}
-              <span className="ml-4"> {category.count}</span>
+              ))}
             </div>
-          ))}
           {/* Exibição do preço total */}
           <div className="mt-4 flex items-center justify-between">
             <button
@@ -265,5 +303,6 @@ function Modal({ isOpen, onClose }) {
     </Dialog>
   );
 }
+
 
 export default EventRegister;
