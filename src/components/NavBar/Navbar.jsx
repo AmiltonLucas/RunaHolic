@@ -1,33 +1,20 @@
 "use client";
 // Imports
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
-  Popover,
-  PopoverButton,
   PopoverGroup,
-  PopoverPanel,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
 } from "@headlessui/react";
 import {
   Bars3Icon,
   BellIcon,
-  MagnifyingGlassIcon,
   ShoppingBagIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import DarkMode from "./DarkMode";
 import Logo from "../../assets/logo.png";
-import Shorts from "../../assets/NavBar/shorts.jpg";
-import TopCropped from "../../assets/NavBar/topcropped.jpg";
-import Camisas from "../../assets/NavBar/camisas.jpeg";
-import ShortMasculino from "../../assets/NavBar/shortsMasculino.jpeg";
 
 const user = {
   name: "Tom Cook",
@@ -47,35 +34,6 @@ const navigation = {
     { name: "Lojas", href: "/lojas" },
   ],
 };
-
-// Informações da LowerBar
-const Menu = [
-  {
-    id: 1,
-    name: "Home",
-    link: "/",
-  },
-  {
-    id: 2,
-    name: "Mais bem Avaliados",
-    link: "/topavaliados",
-  },
-  {
-    id: 3,
-    name: "Espaço Masculino",
-    link: "/masculino",
-  },
-  {
-    id: 4,
-    name: "Acessórios",
-    link: "/acessorios",
-  },
-  {
-    id: 4,
-    name: "Espaço Feminino",
-    link: "/feminino",
-  },
-];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

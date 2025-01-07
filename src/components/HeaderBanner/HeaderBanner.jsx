@@ -1,28 +1,34 @@
-import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const FullScreenBanner = () => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
-  const images = ["/banner1.png", "/banner2.png"];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(intervalId);
-  }, [images]);
+  // Imagens vindas de placeholders
+  const images = ["/banner1.png", "/RUNHOLIC.png"];
 
   return (
-    <div
-      className={`md:h-[100vh] h-[35vh] flex justify-center items-center transition-all duration-700`}
-      style={{
-        backgroundImage: `url(${images[currentImage]})`,
-        backgroundPosition: "center",
-        backgroundSize: "contain",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div className="w-full overflow-hidden">
+      <Slider {...settings}>
+        {images.map((image, index) => (
+          <div key={index}>
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
