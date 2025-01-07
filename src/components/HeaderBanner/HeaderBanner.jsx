@@ -14,7 +14,7 @@ const FullScreenBanner = () => {
   };
 
   // Imagens vindas de placeholders
-  const images = ["/banner1.png", "/RUNHOLIC.png"];
+  const images = ["/RUNHOLIC.png"];
 
   return (
     <div className="w-full overflow-hidden">
